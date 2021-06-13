@@ -1,0 +1,18 @@
+# some information about you
+name: "Dhiman Roy"
+nickname: "Dhiman"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hello, I am"
+image: "images/author/dhiman.jpg"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "dhimanroy117@gmail.com"
+  phone: "+88 01521 440 306"
+
+# some summary about what you do
+summary:
+  - I am an enthusiast researcher
+  - I am a teacher
+  - I love to code
+  - I work on computational fluid dynamics
+  - I am a Research Assistant at Mufel. BUET
