@@ -3,7 +3,7 @@ section:
   name: Curriculum Vitae
   subname: Education
   id: cv
-  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  template: sections/cv.html # Use "sections/education-alt.html for alternate template.
   enable: true
   weight: 2
   showOnNavbar: true
@@ -11,36 +11,37 @@ section:
   # hideTitle: true
 
 degrees:
-- name: Ph.D in Quantum Cryptography
-  icon: fa-microscope
-  timeframe: 2016-2020
-  institution:
-    name: ABC University of Technology
-    url: "#"
-  grade: #(optional)
-    scale: CGPA
-    achieved: 3.6
-    outOf: 4
-  publications: #(optional)
-  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    url: "#"
-  - title: Fusce eu augue ut odio porttitor pulvinar.
-    url: "#"
-  - title: Nullam vitae orci tincidunt purus viverra pulvinar.
-    url: "#"
-- name: B.Sc. in Computer Science & Engineering
+#- name: Ph.D in Quantum Cryptography
+#  icon: fa-microscope
+#  timeframe: 2016-2020
+#  institution:
+#    name: ABC University of Technology
+#    url: "#"
+#  grade: #(optional)
+#    scale: CGPA
+#    achieved: 3.6
+#    outOf: 4
+#  publications: #(optional)
+#  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#    url: "#"
+#  - title: Fusce eu augue ut odio porttitor pulvinar.
+#    url: "#"
+#  - title: Nullam vitae orci tincidunt purus viverra pulvinar.
+#    url: "#"
+- name: B.Sc. in Mechanical Engineering
   icon: fa-graduation-cap
-  timeframe: 2012-2016
+  timeframe: 2015 - 2019
   institution:
-    name: University of XYZ
-    url: "#"
+    name: Bangladesh University of Engineering and Technology
+    url: "https://buet.ac.bd"
   grade: #(optional)
+    show: true
     scale: CGPA
-    achieved: 3.5
+    achieved: 3.57
     outOf: 4
   takenCourses: #(optional)
-    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
-    showGrades: true
+    showCourses: false    #if true, will show this div
+    showGrades: false     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
     courses:
     - name: Data Structures and Algorithm
       achieved: 3.75
@@ -55,36 +56,48 @@ degrees:
       achieved: 3.75
       outOf: 4
   publications: #(optional)
-  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    url: "#"
-  - title: Fusce eu augue ut odio porttitor pulvinar.
-    url: "#"
-  extracurricularActivities: #(optional)
-  - In vitae facilisis est, eget porta sem.
-  - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
-  - Duis sed massa feugiat, ornare justo et, aliquam est.
-  - Pellentesque ut fringilla magna.
+    showPublications: false   #if true, will show this div
+    pubList:
+    - title: publication 1
+      url: ""
+    - title: publication 2
+      url: ""
+  #extracurricularActivities: #(optional)
+  extracurricular:
+    show: false
+    activities:
+    - Football
+    - Film Making
+    - Origami
+    - Cultural
+
 - name: Higher Secondary School Certificate
   icon: fa-university
-  timeframe: 2010-2012
+  timeframe: 2012 - 2014
   institution:
-    name: MST College of Science
-    url: "#"
+    name: Cantonment Public School & College, Rangpur
+    url: "http://cpscr.edu.bd"
   grade: #(optional)
+    show: true
     scale: GPA
     achieved: 5
     outOf: 5
-  extracurricularActivities: #(optional)
-  - In vitae facilisis est, eget porta sem.
-  - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
-  - Duis sed massa feugiat, ornare justo et, aliquam est.
-  - Pellentesque ut fringilla magna.
+  extracurricular: #(optional)
+    show: false
+    activities:
+    - In vitae facilisis est, eget porta sem.
+    - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
+    - Duis sed massa feugiat, ornare justo et, aliquam est.
+    - Pellentesque ut fringilla magna.
+
 - name: Secondary School Certificate
   icon: fa-school
-  timeframe: 2005-2010
+  timeframe: 2010 - 2012
   institution:
-    name: JK School of Science
+    name: Rangpur Zilla School
+    url: "http://www.rangpurzillaschool.edu.bd"
   grade: #(optional)
+    show: true
     scale: GPA
-    achieved: 4.5
+    achieved: 5
     outOf: 5

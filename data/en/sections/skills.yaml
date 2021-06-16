@@ -11,39 +11,58 @@ section:
 # Your Skills.
 # Give a summary of you each skill in the summary section.
 skills:
-- name: Kubernetes
-  logo: /images/sections/skills/kubernetes.png
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
-  url: "https://kubernetes.io/"
+- name: Matlab
+  logo: /images/sections/skills/matlab.svg
+  summary: "Capable of using MATLAB as general computation tool."
+  url: "https://www.mathworks.com/products/matlab.html"
 
-- name: Go Development
-  logo: /images/sections/skills/go.png
-  summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
-  url: "https://golang.org/"
+- name: Python
+  logo: /images/sections/skills/python.png
+  summary: "Using as the main language for making post processing tools. Capable of writing scalable, maintainable, and efficient program."
+  url: "https://python.org/"
 
-- name: Cloud Computing
-  logo: /images/sections/skills/cloud.png
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+- name: C
+  logo: /images/sections/skills/c.svg
+  summary: "Know basic C programming. Used for problem solving. Teaching C programming language as a course in Sonargaon University (SU)."
 
-- name: Docker
-  logo: /images/sections/skills/docker.svg
-  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
-  url: "https://www.docker.com/"
+- name: ANSYS Fluent
+  logo: /images/sections/skills/fluent2.png
+  summary: "Capable using ANSYS Fluent as FEM Modeling Tool."
+  url: "https://www.ansys.com/products/fluids/ansys-fluent"
 
-- name: Prometheus
-  logo: /images/sections/skills/prometheus.png
-  summary: "Capable of setup, configure Prometheus metrics. Experienced with PromQL, AlertManager. Also, experienced with writing metric exporters."
-  url: "https://prometheus.io/"
+- name: Scheme
+  logo: /images/sections/skills/scheme.svg
+  summary: "Capable of writing and applying Scheme codes to automate pre-processing in ANSYS Fluent."
+  url: "https://en.wikipedia.org/wiki/Scheme_(programming_language)"
+
+- name: AutoCAD
+  logo: /images/sections/skills/autocad.png
+  summary: "Know basic fuctionatilies of autoCAD. Can design layouts."
+
+- name: Solidworks
+  logo: /images/sections/skills/solidworks.png
+  summary: "Can design complex 3D models."
+
+- name: Tecplot 360ex
+  logo: /images/sections/skills/tecplot.png
+  summary: "Using Tecplot 360ex as primary post-processing tool."
+  url: "https://www.tecplot.com"
+
+- name: Inkscape
+  logo: /images/sections/skills/inkscape.png
+  summary: "Also experienced with Inkscape."
+  url: "https://inkscape.org"
 
 - name: Linux
   logo: /images/sections/skills/linux.png
-  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+  summary: "Using Ubuntu as secondary operating system. Capable of writing bash/shell scripts."
 
 - name: Git
   logo: /images/sections/skills/git.png
-  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+  summary: "Experienced with git-based development. Mostly, use Github."
   url: "https://git-scm.com/"
 
-- name: C++
-  logo: /images/sections/skills/c++.png
-  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
+- name: Go Language
+  logo: /images/sections/skills/go.png
+  summary: "Familiar with Go. Developed this website using a self modified HUGO theme."
+  url: "https://golang.org"

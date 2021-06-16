@@ -13,17 +13,34 @@
     <!-- summary -->
     <div class="col-sm-6">
       <h3 class="p-1">{{ $author.name }}</h3>
-      {{ if .designation }}
+      {{ if .designation1 }}
       <h5 class="p-1">
-        {{ .designation }}
-        {{ if .company }}
-        {{ i18n "at"}} <a href="{{ .company.url }}" title="{{ .company.name }}" target="_blank" rel="noopener">{{ .company.name }}</a>
+        {{ .designation1 }}
+        {{ if .company1 }}
+        {{ i18n "at"}} {{ if .company1.dept }} {{.company1.dept}}  {{ end }} <a href="{{ .company1.url }}" title="{{ .company1.name }}" target="_blank" rel="noopener">{{ .company1.name }}</a>
         {{ end }}
       </h5>
       {{ end }}
+
       <p class="p-1 text-justify">
-        {{ .summary | markdownify }}
+        {{ .summaryCompany1 | markdownify }}
       </p>
+
+      {{ if .designation2 }}
+      <h5 class="p-1">
+        {{ .designation2 }}
+        {{ if .company2 }}
+        {{ i18n "at"}} {{ if .company2.dept }} {{.company2.dept}}  {{ end }} <a href="{{ .company2.url }}" title="{{ .company2.name }}" target="_blank" rel="noopener">{{ .company2.name }}</a>
+        {{ end }}
+      </h5>
+      {{ end }}
+
+      {{ if .summaryCompany2 }}
+      <p class="p-1 text-justify">
+        {{ .summaryCompany2 | markdownify }}
+      </p>
+      {{ end }}
+
       <div class="text-container ml-auto">
         <ul class="social-link d-flex">
           {{ range .socialLinks }}
