@@ -2,7 +2,9 @@
 {{ if eq .type "certification" }}
     {{/* Verifiable certificate badge from https://www.credly.com */}}
     <div class="">
+    {{ if .url }}
       <a href="{{ .url }}" target="_blank" >
+    {{ end }}
        <img src="{{ .badge }}" alt="{{ .name }}" />
       </a>
     </div>
