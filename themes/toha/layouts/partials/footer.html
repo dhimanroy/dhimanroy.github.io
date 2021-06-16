@@ -154,13 +154,14 @@
           -->
         </div>
         
-        <div class="col-md-4 text-center">{{ $copyrightNotice | markdownify }}
-          <a id="theme" href="" target="_blank" rel="noopener">
-            Dhiman Roy
+        <div class="col-md-4 text-center text-white">© {{ now.Format "2006" }} || 
+          <a class="text-white">
+            {{ $copyrightNotice | markdownify }}
           </a>
         </div>
-        <!--
+        
         <div class="col-md-4 text-right">
+          <!--
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">{{ i18n "hugoAttributionText" }}
           <img
             src="{{ $hugoLogo }}"
@@ -168,8 +169,9 @@
             height="18"
           />
           </a>
+          -->
         </div>
-        -->
+        
       </div>
     </div>
     {{ end }}
