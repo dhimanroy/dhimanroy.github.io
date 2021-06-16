@@ -17,8 +17,8 @@ description: Portfolio and personal blog of Dhiman Roy.
 
 # Specify OpenGraph Headers
 openGraph:
-  title: Dhiman Roy's Website
+  title: Dhiman Roy
   type: Article
-  description: Portfolio and personal blog of Dhiman Roy.
+  description: I am a passionate mechanical engineer and a young researcher.
   image: files/forOG.jpg
   url: https://dhimanroy.github.io
