@@ -36,7 +36,7 @@ outputs:
   - JSON
 
 # Enable Google Analytics
-googleAnalytics: UA-122321624-2
+googleAnalytics: 
 
 # Enable global emoji support
 enableEmoji: true
@@ -100,7 +100,7 @@ params:
     newsletter:
       enable: false
       provider: mailchimp
-      mailchimpURL: https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;id=094a24c76e
+      mailchimpURL: 
 
     # Show/hide disclaimer notice in the footer. Default is "false".
     disclaimer:
