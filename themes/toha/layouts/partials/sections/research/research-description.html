@@ -1,0 +1,21 @@
+<div class="col-10 col-lg-8">
+    <div class="experience-entry-heading">
+        {{ $position:= index .title 0 }}
+        <h4 rel="noopener" style="color: #aa4e24" ></h4>
+        <!-- For single position, give emphasis on the designation-->
+        <h5></h5>
+        <h6></h6>
+        <p class="text-secondary">
+            
+        </p>
+        
+        <!-- Add experience duration info -->
+
+        <p class="text-muted">
+            
+        </p>
+    </div>
+    <!-- Add company overview -->
+    <p>{{ .shortDescription | markdownify }}</p>
+
+</div>

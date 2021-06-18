@@ -7,7 +7,9 @@
     {{ if not (.section.hideTitle) }}
     <h1 class="text-center">{{ .section.name }}</h1></br>
     {{ end }}
-    <h1 class="text-center">{{ .section.subname }}</h1>
+    {{ if .section.subName }}
+    <h1 class="text-center">{{ .section.subName }}</h1>
+    {{ end }}
     <div class="container">
         <table class="education-info-table">
             <tbody>

@@ -1,0 +1,58 @@
+{{ $sectionID := replace (lower .section.name) " " "-"  }}
+{{ if .section.id }}
+{{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container-fluid anchor pb-5 education-section" id="{{ $sectionID }}">
+    {{ if not (.section.hideTitle) }}
+    <h1 class="text-center">{{ .section.name }}</h1></br>
+    {{ end }}
+    
+    {{ if .researchInterest }}
+    <div class="container timeline text-justify">
+        <div class="row align-items-center  d-flex">
+            <div class="col-1 col-lg-2 text-center d-inline-flex justify-content-center">
+                <div class=""></div>
+            </div>
+            <div class="col-10 col-lg-8">
+                <div class="experience-entry-heading">
+                    <h4 rel="noopener" style="color: #aa4e24" >Research Interest</h4>
+                    <ul class="justify-content-around">
+                        {{ range .researchInterest }}
+                            <li>{{ . | markdownify }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+
+    
+
+    {{ if .researchContents }}
+    <!--
+    <div class="container timeline text-justify">
+        {{ $totalResearch:= len .researchContents }}
+        {{ range $index,$content:= .researchContents }}
+          {{ if eq (mod $index 2) 0 }}
+            <div class="row align-items-center  d-flex">
+              {{ partial "sections/experiences/vertical-line.html" $index }}
+              {{ partial "sections/research/research-description.html" $content }}
+            </div>
+          {{else}}
+            <div class="row align-items-center justify-content-end d-flex">
+              {{ partial "sections/research/research-description.html" $content }}
+              {{ partial "sections/experiences/vertical-line.html" $index }}
+            </div>
+          {{ end }}
+          {{ if lt $index (sub $totalResearch 1) }}
+            {{ partial "sections/experiences/horizontal-line.html" $index }}
+          {{ end }}
+        {{ end }}
+    </div>
+    -->
+    {{ end }}
+
+
+</div>

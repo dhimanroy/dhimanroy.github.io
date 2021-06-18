@@ -1,0 +1,20 @@
+section:
+  name: Research
+  id: research
+  enable: true
+  weight: 4
+  showOnNavbar: true
+
+researchInterest:
+  - Microfluidics 
+  - Nanofluidics
+  - CFD
+  - Rarefied Gas Dynamics
+
+
+researchContents:
+- content:
+  title: d
+
+- content:
+  title: h
