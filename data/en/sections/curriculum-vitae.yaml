@@ -33,7 +33,7 @@ degrees:
   timeframe: 2015 - 2019
   institution:
     name: Bangladesh University of Engineering and Technology
-    url: "https://buet.ac.bd"
+    url: "https://www.buet.ac.bd/"
   grade: #(optional)
     show: true
     scale: CGPA
