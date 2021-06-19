@@ -10,20 +10,20 @@
   
     <div class="container timeline text-justify">
      {{ $totalPublications:= len .publicationList }}
-     {{ range $indexPub,$publication:= .publicationList }}
-       {{ if eq (mod $indexPub 2) 0 }}
+     {{ range $index,$publication:= .publicationList }}
+       {{ if eq (mod $index 2) 0 }}
          <div class="row align-items-center  d-flex">
-           {{ partial "sections/publications/vertical-line2.html" $indexPub }}
+           {{ partial "sections/publications/vertical-line2.html" $index }}
            {{ partial "sections/publications/publication-info.html" $publication }}
          </div>
        {{else}}
          <div class="row align-items-center justify-content-end d-flex">
            {{ partial "sections/publications/publication-info.html" $publication }}
-           {{ partial "sections/publications/vertical-line2.html" $indexPub }}
+           {{ partial "sections/publications/vertical-line2.html" $index }}
          </div>
        {{ end }}
-       {{ if lt $indexPub (sub $totalPublications 1) }}
-         {{ partial "sections/publications/horizontal-line2.html" $indexPub }}
+       {{ if lt $index (sub $totalPublications 1) }}
+         {{ partial "sections/publications/horizontal-line2.html" $index }}
        {{ end }}
      {{ end }}
     </div>

@@ -7,17 +7,17 @@
         <!-- Add company overview -->
     </div>
     <!-- Add the positions information -->
+    
     <div class="positions">
     {{ range $index,$item:= .entry }}
-        <h6 class="designation">{{ $item.title | markdownify }}{{ if $item.url }} doi: <a href="https://doi.org/{{ $item.url }}">{{ $item.url }} </a> {{ end }} </h6>
+        <h6 class="designation">{{ $item.title | markdownify }}{{ if $item.url }} doi: <a href="https://doi.org/{{ $item.url }}">{{ $item.url }} </a> {{ end }} </h6> <br />
         <!-- 
            <p class="p-1 text-justify">{{ $item.title | markdownify }}</p>
         -->
         <!-- Add the responsibilities handled at this position -->
         {{ if $item.abstract.show }}
-            <br />
             <h6 class="position">Abstract</h6>
-            <p>{{ $item.abstract.text | markdownify }}</p>
+            <p>{{ $item.abstract.text | markdownify }}</p><br />
         {{ end }}   
     {{ end }}
     </div>

@@ -24,19 +24,13 @@ publicationList:
 
 - publication:
     type: Conference Publication               #Journal or Conference or Book Chapter
-  entry:
-    - title: '<text style="color: #aa4e24">Roy, D.</text>, Hasan, T., Hasan, A.T. and Islam, A.S., 2021. A Computational Analysis of Fluid Mixing Characteristics Inside a Microchannel by Pulsating Streams. In <i>Proceedings of 16th Asian Congress of Fluid Mechanics</i> (pp. 185-193). Springer, Singapore.'
+  entry:                                       #add - title here
+    - title: '[1] <text style="color: #aa4e24">Roy, D.</text>, Hasan, T., Hasan, A.T. and Islam, A.S., 2021. A Computational Analysis of Fluid Mixing Characteristics Inside a Microchannel by Pulsating Streams. In <i>Proceedings of 16th Asian Congress of Fluid Mechanics</i> (pp. 185-193). Springer, Singapore.'
       url: 10.1007/978-981-15-5183-3_20
       abstract:
-        show: ture
+        show: true
         text: 'In a microfluidic channel, mixing becomes troublesome as it is obviously constrained by mass diffusion at low Reynolds number. This work computationally analyzes the use of pulsating streams for possible enhancement of fluid mixing in a microchannel at Reynolds number of 0.2. A simple two-dimensional T-shaped microchannel is considered for this study. Two pulsatile streams are kept out of phase by 90° while the pulsation frequency is kept constant at 7.5 Hz. However, the ratio of pulse amplitude to base velocity has been varied in the range of 5.0–12.5. Moreover, the ratio of pulse amplitudes of two streams has been changed from 1.0 to 2.0. It is observed that an increment of pulse amplitude to base velocity ratio results an increase in the degree of mixing inside the microchannel. In addition, fluctuation characteristics in mixing degree decrease with an increase in pulse amplitude. In case of varied pulse amplitudes of two streams, results showed that the quality of mixing is enhanced by increasing the ratio until 1.7. Finally, the required minimum length of a microchannel for a specific degree of mixing is identified from the results of the present work.'
-  
-#    - title:  Conference Paper Title
-#      url:
-#      abstract:
-#        show: ture
-#        text: Conference paper 1 abstract
-
+ 
 #- publication:
 #    type: Book Chapter               #Journal or Conference or Book Chapter
 #  entry:

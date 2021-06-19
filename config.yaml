@@ -2,7 +2,7 @@ baseURL: https://dhimanroy.github.io
 
 languageCode: en-us
 title: "Dhiman Roy"
-theme: "toha"
+theme: "tohaAcademic-Dhiman"
 
 # Manage languages
 # For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
