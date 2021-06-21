@@ -3,7 +3,7 @@
 {{ $sectionID = .section.id }}
 {{ end }}
 
-<div class="container-fluid anchor pb-5 education-section" id="{{ $sectionID }}">
+<div class="container-fluid anchor pb-5" id="{{ $sectionID }}">
     {{ if not (.section.hideTitle) }}
     <h1 class="text-center">{{ .section.name }}</h1></br>
     {{ end }}
@@ -27,14 +27,4 @@
         </div>
     </div>
     {{ end }}
-
-    
-
-    {{ if .researchContents }}
-        {{ range .researchContents }}
-            {{ partial "sections/research/researchPartial.html" . }}
-        {{ end }}
-    {{ end }}
-
-
 </div>
