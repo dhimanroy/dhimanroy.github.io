@@ -7,14 +7,21 @@ section:
   hideTitle: true
 
 researchContents:
+
 - content:
-  title: A Computational Analysis of Fluid Mixing Characteristics Inside a Microchannel by Pulsating Streams.
-  image: "files/research/codeComp.jpg"
+  title: 'Modelling the exposure risk tradeoff between public transit and private paratransit for transport decision making in the era of Covid19 [Current Project]'
+  image: "files/research/shield0-5ms-10micron.gif"
+  description: 'The COVID19 pandemic has massively disrupted the transport sector and economic activities. 
+                In the project countries, motorcycle-based paratransits are banned from operating in order to maintain safe distances. 
+                In addition to disrupting travel and affecting the primarily poor users (prices in other modes have gone up), 
+                this has also resulted in massive unemployment and poverty among the drivers. 
+                However, there are also serious concerns about the safety of passengers in crowded buses or micro-transit vehicles, 
+                where maintaining appropriate distances are nearly impossible, and paratransits can be a viable alternative.'
+
+- content:
+  title: Fluid Mixing Characteristics Inside a Microchannel
+  image: "files/research/micromixingInT.gif"
   description: 'In a microfluidic channel, mixing becomes troublesome as it is obviously constrained by mass diffusion at low Reynolds number. 
                 This work computationally analyzes the use of pulsating streams for possible enhancement of fluid mixing in a microchannel at Reynolds number of 0.2. 
                 A simple two-dimensional T-shaped microchannel is considered for this study.'
 
-- content:
-  title: Mechanical Properties of Cu-Ni and Al-Ni FGM Nanowire
-  image: "files/research/shield0-5ms-10micron.gif"
-  description: In this project, we are exploring the mechanical properties of Functionally Graded Nanowires. Functionally Graded Materials are a comparatively recent practice of material design, often used to achieve multifunctionality without creating phase interfaes. Bulk FGMs are still fledging through commercialization, however, FGMs at nanoscale are a yet to be explored field of research. At nanoscale, such functionalizations offers immense possibilities, since, motions of dislocations can be tailored through design factors and plasticity of materials can be largely be controlled to the desired direction.
