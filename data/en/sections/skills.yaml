@@ -3,7 +3,7 @@ section:
   name: Skills
   id: skills
   enable: true
-  weight: 7
+  weight: 8
   showOnNavbar: false
   # Can optionally hide the title in sections
   # hideTitle: true

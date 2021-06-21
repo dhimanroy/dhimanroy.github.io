@@ -2,7 +2,7 @@ section:
   name: Publication(s)
   id: publications
   enable: true
-  weight: 5
+  weight: 6
   showOnNavbar: true
 
 publicationList:

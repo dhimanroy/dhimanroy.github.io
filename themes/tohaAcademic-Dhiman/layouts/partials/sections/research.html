@@ -10,11 +10,11 @@
     
     {{ if .researchInterest }}
     <div class="container timeline text-justify">
-        <div class="row align-items-center  d-flex">
+        <div class="row align-items-center d-flex">
             <div class="col-1 col-lg-2 text-center d-inline-flex justify-content-center">
                 <div class=""></div>
             </div>
-            <div class="col-10 col-lg-8">
+            <div class="col-10 col-lg-10">
                 <div class="experience-entry-heading">
                     <h4 rel="noopener" style="color: #aa4e24" >Fields of Interest</h4>
                     <ul class="justify-content-around">
@@ -31,27 +31,9 @@
     
 
     {{ if .researchContents }}
-    <!--
-    <div class="container timeline text-justify">
-        {{ $totalResearch:= len .researchContents }}
-        {{ range $index,$content:= .researchContents }}
-          {{ if eq (mod $index 2) 0 }}
-            <div class="row align-items-center  d-flex">
-              {{ partial "sections/experiences/vertical-line.html" $index }}
-              {{ partial "sections/research/research-description.html" $content }}
-            </div>
-          {{else}}
-            <div class="row align-items-center justify-content-end d-flex">
-              {{ partial "sections/research/research-description.html" $content }}
-              {{ partial "sections/experiences/vertical-line.html" $index }}
-            </div>
-          {{ end }}
-          {{ if lt $index (sub $totalResearch 1) }}
-            {{ partial "sections/experiences/horizontal-line.html" $index }}
-          {{ end }}
+        {{ range .researchContents }}
+            {{ partial "sections/research/researchPartial.html" . }}
         {{ end }}
-    </div>
-    -->
     {{ end }}
 
 

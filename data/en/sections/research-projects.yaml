@@ -1,0 +1,20 @@
+section:
+  name: Research Projects
+  id: research-projects
+  enable: true
+  weight: 5
+  showOnNavbar: false
+  hideTitle: true
+
+researchContents:
+- content:
+  title: A Computational Analysis of Fluid Mixing Characteristics Inside a Microchannel by Pulsating Streams.
+  image: "files/research/codeComp.jpg"
+  description: 'In a microfluidic channel, mixing becomes troublesome as it is obviously constrained by mass diffusion at low Reynolds number. 
+                This work computationally analyzes the use of pulsating streams for possible enhancement of fluid mixing in a microchannel at Reynolds number of 0.2. 
+                A simple two-dimensional T-shaped microchannel is considered for this study.'
+
+- content:
+  title: Mechanical Properties of Cu-Ni and Al-Ni FGM Nanowire
+  image: "files/research/shield0-5ms-10micron.gif"
+  description: In this project, we are exploring the mechanical properties of Functionally Graded Nanowires. Functionally Graded Materials are a comparatively recent practice of material design, often used to achieve multifunctionality without creating phase interfaes. Bulk FGMs are still fledging through commercialization, however, FGMs at nanoscale are a yet to be explored field of research. At nanoscale, such functionalizations offers immense possibilities, since, motions of dislocations can be tailored through design factors and plasticity of materials can be largely be controlled to the desired direction.
