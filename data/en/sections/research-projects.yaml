@@ -19,7 +19,7 @@ researchContents:
                 where maintaining appropriate distances are nearly impossible, and paratransits can be a viable alternative.'
 
 - content:
-  title: Fluid Mixing Characteristics Inside a Microchannel
+  title: Microfluidic Mixing Inside a T-shaped Channel
   image: "files/research/micromixingInT.gif"
   description: 'In a microfluidic channel, mixing becomes troublesome as it is obviously constrained by mass diffusion at low Reynolds number. 
                 This work computationally analyzes the use of pulsating streams for possible enhancement of fluid mixing in a microchannel at Reynolds number of 0.2. 
