@@ -5,7 +5,7 @@ homepage = ""
 license = "MIT"
 licenselink = "https://github.com/hugo-toha/toha/blob/master/LICENSE"
 min_version = "0.68.0"
-name = "Toha"
+name = "TohaAcademic-Dhiman"
 
 features = [
   "Minimalist Design",
