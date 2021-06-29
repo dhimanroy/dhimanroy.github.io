@@ -30,7 +30,13 @@
     
     <!-- Add Google Analytics if enabled in configuration -->
     {{ if site.GoogleAnalytics }}
-        {{ template "_internal/google_analytics_async.html" . }}
+        <!-- Google Analytics v3  ID -->
+        {{ if hasPrefix site.GoogleAnalytics "UA-"}}
+          {{ template "_internal/google_analytics_async.html" . }}
+        {{ else }}
+          <!-- Google Analytics v4  ID -->
+          {{ template "_internal/google_analytics.html" . }}
+        {{ end }}
     {{ end }}
     <meta name="msvalidate.01" content="1E60FD6D95065FD486D5EC9E2D774F3A" />
   </head>
