@@ -10,4 +10,4 @@ Hi, I am Dhiman Roy. A passionate mecanical engineer and a young researcher.
 ![Open Issues](https://img.shields.io/github/issues/dhimanroy/dhimanroy.github.io?color=important)
 ![Open Pull Requests](https://img.shields.io/github/issues-pr/dhimanroy/dhimanroy.github.io?color=yellowgreen)
 
-[Visit site](https://dhimanroy.github.io)
+[Visit site](https://dhimanroy.github.io?redirectFrom=github)
