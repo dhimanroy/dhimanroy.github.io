@@ -65,9 +65,12 @@ params:
       enable: true
     # Enable and configure blog posts
     blog:
-      enable: true
+      enable: false
     # Enable & configure "Notes" features
     notes:
+      enable: false
+    # Enable & configure "Codes" features
+    codes:
       enable: true
 
 

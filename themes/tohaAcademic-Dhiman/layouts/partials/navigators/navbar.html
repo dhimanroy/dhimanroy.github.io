@@ -1,6 +1,7 @@
 {{/*  variables for enabling/disabling various features  */}}
 {{ $blogEnabled   := site.Params.features.blog.enable   | default false }}
 {{ $notesEnabled  := site.Params.features.notes.enable  | default false }}
+{{ $codesEnabled  := site.Params.features.codes.enable  | default false }}
 
 {{/*  keep backward compatibility for blog post  */}}
 {{ if site.Params.enableBlogPost }}
@@ -113,6 +114,11 @@
         {{ if $notesEnabled }}
           <li class="nav-item">
             <a class="nav-link" id="note-link" href="{{ "/notes" | relLangURL }}">{{ i18n "notes" }}</a>
+          </li>
+        {{ end }}
+        {{ if $codesEnabled }}
+          <li class="nav-item">
+            <a class="nav-link" id="note-link" href="{{ "/codes" | relLangURL }}">{{ i18n "codes" }}</a>
           </li>
         {{ end }}
         {{ range $customMenus }}
