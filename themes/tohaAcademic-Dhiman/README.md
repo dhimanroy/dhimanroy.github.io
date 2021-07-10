@@ -25,7 +25,6 @@ A [Hugo](https://gohugo.io/) theme for a personal portfolio with minimalist desi
 - Google Analytics Support
 - Disqus Comment Support
 
-For more details about the features please visit [here](https://toha-guides.netlify.app/posts/features/).
 
 ## Available Translations
 
