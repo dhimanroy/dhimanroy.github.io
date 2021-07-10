@@ -6,11 +6,10 @@
 ![Last Commit](https://img.shields.io/github/last-commit/dhimanroy/dhimanroy.github.io)
 ![Open Issues](https://img.shields.io/github/issues/dhimanroy/dhimanroy.github.io?color=important)
 ![Open Pull Requests](https://img.shields.io/github/issues-pr/dhimanroy/dhimanroy.github.io?color=yellowgreen)
-![License](https://img.shields.io/github/license/dhimanroy/dhimanroy.github.io)
-![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fdhimanroy.github.io%2F)
 
 
-A [Hugo](https://gohugo.io/) theme for a personal portfolio with minimalist design and responsiveness. Designed by [Emruz Hossain](https://github.com/hossainemruz).
+
+A [Hugo](https://gohugo.io/) theme for a personal portfolio with minimalist design and responsiveness. Designed by [Emruz Hossain](https://github.com/hossainemruz). Modified by [Dhiman Roy](https://github.com/dhimanroy).
 
 
 ## Features
