@@ -1,4 +1,4 @@
-# Hi, I am Dhiman Roy. A passionate mecanical engineer and a young researcher.
+Hi, I am Dhiman Roy. A passionate mecanical engineer and a young researcher.
 
 
 [![Build Status](https://github.com/dhimanroy/dhimanroy.github.io/actions/workflows/deploy-site.yaml/badge.svg)](https://github.com/dhimanroy/dhimanroy.github.io/actions/workflows/deploy-site.yaml/badge.svg)
