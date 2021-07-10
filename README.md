@@ -1,7 +1,8 @@
+# Dhiman Roy
+
 Hi, I am Dhiman Roy. A passionate mecanical engineer and a young researcher.
 
-
-[![Build Status](https://github.com/dhimanroy/dhimanroy.github.io/actions/workflows/deploy-site.yaml/badge.svg)](https://github.com/dhimanroy/dhimanroy.github.io/actions/workflows/deploy-site.yaml/badge.svg)
+![Build Status](https://github.com/dhimanroy/dhimanroy.github.io/actions/workflows/deploy-site.yaml/badge.svg)
 ![Repository Size](https://img.shields.io/github/repo-size/dhimanroy/dhimanroy.github.io)
 ![Lines of Codes](https://img.shields.io/tokei/lines/github/dhimanroy/dhimanroy.github.io)
 ![Contributor](https://img.shields.io/github/contributors/dhimanroy/dhimanroy.github.io)
