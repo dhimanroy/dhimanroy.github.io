@@ -123,7 +123,7 @@
         {{ end }}
         {{ range $customMenus }}
           <li class="nav-item">
-            <a class="nav-link" href="{{ .url }}">{{ .name }}</a>
+            <a class="nav-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
           </li>
         {{ end }}
         {{ if .IsTranslated }}
