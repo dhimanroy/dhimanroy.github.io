@@ -3,7 +3,7 @@ title: Script for decoding Particle History Data (.xml) files (Exported from Ans
 weight: 27
 menu:
   codes:
-    name: For decoding Particle History Data .xml files
+    name: DPM Particle History
     identifier: codes-decoding-xml
     weight: 27
 ---
