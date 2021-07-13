@@ -1,0 +1,178 @@
+<!doctype html><html><head><title>Python script for creating Java Script that populates a webform</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css><link rel=icon type=image/png href=/images/site/favicon_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png><meta property="og:title" content="Python script for creating Java Script that populates a webform"><meta property="og:description" content="Python script for creating Java Script that populates a webform This script reads the obtained marks of the students from an Excel file and creates a Java Script that can be used to populate a certain webform automatically. In short, data entry is not a problem anymore.
+#===================================================================# # Title: JavaScript Maker for Marks input # # Author: Dhiman Roy, Dept. of ME (BUET) # # Date: April 12, 2021 # # Licensed under Creative Commons # #===================================================================# import os import pandas as pd from pathlib import Path os."><meta property="og:type" content="article"><meta property="og:url" content="https://dhimanroy.github.io/codes/python-scripts/for-creating-java-script/"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/notes.css><link rel=stylesheet href=/css/navigators/sidebar.css><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-199814292-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu98b1e25c44cc76379c733a63e18e4740_51846_42x0_resize_box_2.png alt=Logo>
+Dhiman Roy</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/site/main-logo_hu98b1e25c44cc76379c733a63e18e4740_51846_42x0_resize_box_2.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/codes data-filter=all>Codes</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/codes/bash-scripts/>Bash Scripts</a><ul><li><a href=/codes/bash-scripts/for-custom-commands/ title="For custom commands">For custom commands</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/batch-scripts/>Batch Scripts</a><ul><li><a href=/codes/batch-scripts/for-adding-firewall-rules/ title="For adding firewall rules">For adding firewall rules</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/scheme-codes/>Scheme Codes</a><ul><li><a href=/codes/scheme-codes/for-creating-points-and-monitors/ title="For creating points and monitors">For creating points and monitors</a></li><li><a href=/codes/scheme-codes/for-extacting-xy-plot-data/ title="For extacting xy plot data">For extacting xy plot data</a></li></ul></li><li><i class="fas fa-minus-circle"></i><a class=active href=/codes/python-scripts/>Python Scripts</a><ul class=active><li><a href=/codes/python-scripts/for-calculating-average-drag/ title="For calculating average drag coefficient">For calculating average drag coefficient</a></li><li><a class=active href=/codes/python-scripts/for-creating-java-script/ title="For creating Java Script that populates a webform">For creating Java Script that populates a webform</a></li><li><a href=/codes/python-scripts/for-making-pdf-and-sending-it-to-the-faculty-member/ title="For making PDF of exam routine and sending mail">For making PDF of exam routine and sending mail</a></li></ul></li><li><a href=/codes/decoding-particle-history-data/ title="For decoding Particle History Data .xml files">For decoding Particle History Data .xml files</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Python script for creating Java Script that populates a webform</span></h5><div class=card><div class=card-body><p>This script reads the obtained marks of the students from an Excel file and creates a Java Script that can be used to populate a certain webform automatically. In short, data entry is not a problem anymore.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#===================================================================#</span>
+<span style=color:#75715e>#   Title:  JavaScript Maker for Marks input                        #</span>
+<span style=color:#75715e>#   Author: Dhiman Roy, Dept. of ME (BUET)                          #</span>
+<span style=color:#75715e>#   Date:   April 12, 2021                                          #</span>
+<span style=color:#75715e>#   Licensed under Creative Commons                                 #</span>
+<span style=color:#75715e>#===================================================================#</span>
+
+<span style=color:#f92672>import</span> os
+<span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
+<span style=color:#f92672>from</span> pathlib <span style=color:#f92672>import</span> Path
+
+os<span style=color:#f92672>.</span>chdir(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>dirname(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>abspath(__file__)))
+
+<span style=color:#66d9ef>try</span>:
+    os<span style=color:#f92672>.</span>mkdir(<span style=color:#e6db74>&#34;JS&#34;</span>)
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t</span><span style=color:#e6db74>JS directory is created.&#34;</span>)
+<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t</span><span style=color:#e6db74>JS directory already exists.&#34;</span>)
+
+
+CURR_DIR <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>getcwd()
+jsDir <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>join(CURR_DIR, <span style=color:#e6db74>&#34;JS&#34;</span>)
+<span style=color:#75715e>#print(CURR_DIR)</span>
+txt_folder <span style=color:#f92672>=</span> Path(CURR_DIR)<span style=color:#f92672>.</span>rglob(<span style=color:#e6db74>&#39;*.xlsx&#39;</span>) <span style=color:#75715e>#reads .xlsx files only</span>
+<span style=color:#75715e>#print(txt_folder)</span>
+files <span style=color:#f92672>=</span> [x <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> txt_folder]
+
+<span style=color:#75715e>#print(files)</span>
+<span style=color:#75715e>#print(&#34;\n&#34;)</span>
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>midOrall</span>():
+    value <span style=color:#f92672>=</span> input(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t</span><span style=color:#e6db74>Do you want script for Mid (m) or All (a)? &#34;</span>)
+    <span style=color:#66d9ef>if</span> value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;m&#39;</span> <span style=color:#f92672>or</span> value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;a&#39;</span>:
+        <span style=color:#75715e>#print(value)</span>
+        <span style=color:#66d9ef>return</span> value
+    <span style=color:#66d9ef>else</span>:
+        <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t</span><span style=color:#e6db74>Please select one...&#34;</span>)
+        midOrall()
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>quitOrNot</span>():
+    quitDmn <span style=color:#f92672>=</span> input(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74>Do you want to quit? (Y/N): &#34;</span>)
+    <span style=color:#66d9ef>if</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;y&#39;</span> <span style=color:#f92672>or</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;Y&#39;</span> <span style=color:#f92672>or</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;yes&#39;</span> <span style=color:#f92672>or</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;Yes&#39;</span> <span style=color:#f92672>or</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;YES&#39;</span>:
+        quit()
+        
+    <span style=color:#66d9ef>elif</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;n&#39;</span> <span style=color:#f92672>or</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;N&#39;</span> <span style=color:#f92672>or</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;no&#39;</span> <span style=color:#f92672>or</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;No&#39;</span> <span style=color:#f92672>or</span> quitDmn <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;NO&#39;</span>:
+        <span style=color:#66d9ef>print</span>()
+    <span style=color:#66d9ef>else</span>:
+        quitOrNot()
+        
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>mustQuit</span>():
+    input(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74>Hit enter to exit.&#34;</span>)
+    quit()
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>stringconv</span>(dmnMark, dmnRow, dmnSec, dmnFile, filename):
+    <span style=color:#66d9ef>try</span>:
+        <span style=color:#66d9ef>return</span> str(int(dmnMark))
+    <span style=color:#66d9ef>except</span>:
+        <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74>Empty cell in SL </span><span style=color:#e6db74>%i</span><span style=color:#e6db74>, Sheet name: </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>, Workbook: </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(dmnRow <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>, dmnSec, dmnFile))
+        <span style=color:#75715e>#quitOrNot()</span>
+        file<span style=color:#f92672>.</span>close()
+        os<span style=color:#f92672>.</span>remove(filename)
+        mustQuit()
+        
+
+<span style=color:#66d9ef>if</span> midOrall() <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;m&#39;</span>:       
+    <span style=color:#66d9ef>for</span> name <span style=color:#f92672>in</span> sorted(files):
+
+        sheetForSection <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>ExcelFile(name)
+        section <span style=color:#f92672>=</span> sheetForSection<span style=color:#f92672>.</span>sheet_names
+        fName <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name)
+        
+        substring <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#39;theory&#39;</span>, <span style=color:#e6db74>&#39;THEORY&#39;</span>, <span style=color:#e6db74>&#39;Theory&#39;</span>]
+        theoryfile <span style=color:#f92672>=</span> []
+        <span style=color:#66d9ef>if</span> substring[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>in</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name))[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>or</span> substring[<span style=color:#ae81ff>1</span>] <span style=color:#f92672>in</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name))[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>or</span> substring[<span style=color:#ae81ff>2</span>] <span style=color:#f92672>in</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name))[<span style=color:#ae81ff>0</span>]:
+            header_val <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+            theoryfile<span style=color:#f92672>.</span>append(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name)) 
+        <span style=color:#66d9ef>else</span>:
+            header_val <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+
+        <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t</span><span style=color:#e6db74>Sections from </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>fName)
+        <span style=color:#66d9ef>for</span> sec <span style=color:#f92672>in</span> section:
+            data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(name, index_col <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, usecols <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C:H&#34;</span>, header <span style=color:#f92672>=</span> header_val, sheet_name <span style=color:#f92672>=</span> sec)
+            <span style=color:#75715e>#print(data)</span>
+            <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t</span><span style=color:#e6db74>-</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>sec)
+            
+            marks <span style=color:#f92672>=</span> data<span style=color:#f92672>.</span>values<span style=color:#f92672>.</span>tolist()
+            <span style=color:#75715e>#print(marks)</span>
+            filename <span style=color:#f92672>=</span> sec <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;_&#34;</span> <span style=color:#f92672>+</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name))[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.txt&#34;</span>
+            <span style=color:#75715e>#print(filename)</span>
+            <span style=color:#66d9ef>if</span> header_val <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>:
+                file <span style=color:#f92672>=</span> open(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>join(jsDir, filename),<span style=color:#e6db74>&#34;w&#34;</span>)
+                i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+                <span style=color:#66d9ef>for</span> each <span style=color:#f92672>in</span> marks:
+                    <span style=color:#66d9ef>if</span> each[<span style=color:#ae81ff>3</span>] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;abs&#39;</span>:
+                        file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;midterm_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, each[<span style=color:#ae81ff>3</span>]))               <span style=color:#75715e>#mid absent</span>
+                    <span style=color:#66d9ef>else</span>:
+                        file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;midterm_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>3</span>], i, sec, fName, filename)))     <span style=color:#75715e>#mid</span>
+                    file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;calTotal(midterm_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>);</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>i)
+                    i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+                
+                file<span style=color:#f92672>.</span>close()
+            <span style=color:#66d9ef>else</span>:
+                <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t</span><span style=color:#e6db74>...Sessionals are skipped...&#34;</span>)
+<span style=color:#66d9ef>else</span>:
+    <span style=color:#66d9ef>for</span> name <span style=color:#f92672>in</span> sorted(files):
+
+        sheetForSection <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>ExcelFile(name)
+        section <span style=color:#f92672>=</span> sheetForSection<span style=color:#f92672>.</span>sheet_names
+        fName <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name)
+        
+        substring <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#39;theory&#39;</span>, <span style=color:#e6db74>&#39;THEORY&#39;</span>, <span style=color:#e6db74>&#39;Theory&#39;</span>]
+        theoryfile <span style=color:#f92672>=</span> []
+
+        <span style=color:#66d9ef>if</span> substring[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>in</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name))[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>or</span> substring[<span style=color:#ae81ff>1</span>] <span style=color:#f92672>in</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name))[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>or</span> substring[<span style=color:#ae81ff>2</span>] <span style=color:#f92672>in</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name))[<span style=color:#ae81ff>0</span>]:
+            header_val <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+            theoryfile<span style=color:#f92672>.</span>append(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name)) 
+        <span style=color:#66d9ef>else</span>:
+            header_val <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+
+        <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t</span><span style=color:#e6db74>Sections from </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>fName)
+        <span style=color:#66d9ef>for</span> sec <span style=color:#f92672>in</span> section:
+            data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(name, index_col <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, usecols <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C:H&#34;</span>, header <span style=color:#f92672>=</span> header_val, sheet_name <span style=color:#f92672>=</span> sec)
+            <span style=color:#75715e>#print(data)</span>
+            <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t</span><span style=color:#e6db74>-</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>sec)
+            
+            marks <span style=color:#f92672>=</span> data<span style=color:#f92672>.</span>values<span style=color:#f92672>.</span>tolist()
+            <span style=color:#75715e>#print(marks)</span>
+            filename <span style=color:#f92672>=</span> sec <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;_&#34;</span> <span style=color:#f92672>+</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>splitext(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>basename(name))[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.txt&#34;</span>
+            <span style=color:#75715e>#print(filename)</span>
+            <span style=color:#66d9ef>if</span> header_val <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>:
+                file <span style=color:#f92672>=</span> open(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>join(jsDir, filename),<span style=color:#e6db74>&#34;w&#34;</span>)
+                i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+                <span style=color:#66d9ef>for</span> each <span style=color:#f92672>in</span> marks:
+                    file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;attendance_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>0</span>], i, sec, fName, filename)))      <span style=color:#75715e>#attendance</span>
+                    file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;performance_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>1</span>], i, sec, fName, filename)))       <span style=color:#75715e>#classtest</span>
+                    <span style=color:#66d9ef>if</span> each[<span style=color:#ae81ff>2</span>] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;abs&#39;</span>:
+                        file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;sessional_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, each[<span style=color:#ae81ff>2</span>]))               <span style=color:#75715e>#sessional final absent</span>
+                    <span style=color:#66d9ef>else</span>:
+                        file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;sessional_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>2</span>], i, sec, fName, filename)))     <span style=color:#75715e>#sessoinal final</span>
+                    file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;calTotal(sessional_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>);</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>i)
+                    i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+        
+                file<span style=color:#f92672>.</span>close()
+
+            <span style=color:#66d9ef>else</span>:
+                file <span style=color:#f92672>=</span> open(filename,<span style=color:#e6db74>&#34;w&#34;</span>)
+                i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+                <span style=color:#66d9ef>for</span> each <span style=color:#f92672>in</span> marks:
+                    file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;attendance_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>0</span>], i, sec, fName, filename)))      <span style=color:#75715e>#attendance</span>
+                    file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;classtest_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>1</span>], i, sec, fName, filename)))       <span style=color:#75715e>#classtest</span>
+                    file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;assignment_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>2</span>], i, sec, fName, filename)))      <span style=color:#75715e>#assignment</span>
+                    <span style=color:#66d9ef>if</span> each[<span style=color:#ae81ff>4</span>] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;abs&#39;</span>:
+                        file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;final_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, each[<span style=color:#ae81ff>4</span>]))                 <span style=color:#75715e>#final absent</span>
+                    <span style=color:#66d9ef>else</span>:
+                        file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;final_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>4</span>], i, sec, fName, filename)))       <span style=color:#75715e>#final</span>
+                    <span style=color:#66d9ef>if</span> each[<span style=color:#ae81ff>3</span>] <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;abs&#39;</span>:
+                        file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;midterm_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, each[<span style=color:#ae81ff>3</span>]))               <span style=color:#75715e>#mid absent</span>
+                    <span style=color:#66d9ef>else</span>:
+                        file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;document.getElementById(&#39;midterm_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>&#39;).value = &#39;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#39;;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, stringconv(each[<span style=color:#ae81ff>3</span>], i, sec, fName, filename)))     <span style=color:#75715e>#mid</span>
+                    file<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;calTotal(midterm_</span><span style=color:#e6db74>%d</span><span style=color:#e6db74>);</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>i)
+                    i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+                
+                file<span style=color:#f92672>.</span>close()
+
+<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t\t</span><span style=color:#e6db74>====================&#34;</span>)
+<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74>Scripts are ready!!!&#34;</span>)
+<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74>====================&#34;</span>)
+<span style=color:#75715e>#print(&#34;\n&#34;)</span>
+input(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t\t</span><span style=color:#e6db74>Press enter to exit...</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
+</code></pre></div></div></div></div></div></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=/#about-me>About Me</a></li><li class=nav-item><a class=smooth-scroll href=/#cv>Curriculum Vitae</a></li><li class=nav-item><a class=smooth-scroll href=/#research>Research</a></li><li class=nav-item><a class=smooth-scroll href=/#publications>Publication(s)</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>dhimanroy***@gmail.com</span></li><li><span>Phone:</span> <span>**************</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4></div><div class="col-md-4 text-center text-white">© 2021 ||
+<a class=text-white>Dhiman Roy</a></div><div class="col-md-4 text-right"></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/imagesloaded.pkgd.min.js></script><script src=/js/note.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
