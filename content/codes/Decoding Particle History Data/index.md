@@ -15,3 +15,4 @@ Demonstration: <br />
 {{< /note >}}
 
 {{< img src="/codes/files/xml.gif" align="center">}}
+<br /> <br />
