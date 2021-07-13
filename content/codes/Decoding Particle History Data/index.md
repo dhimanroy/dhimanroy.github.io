@@ -12,7 +12,7 @@ menu:
 This script can read particle history data (.xml files) exported from Ansys FLUENT. It calculated DPM concentration inside a sphere at different times and writes them in a .dat file. <br /> <br />
 For the script, please [email](mailto:dhimanroy117@gmail.com) me. <br /> <br />
 Demonstration: <br />
+<p class="aligncenter">
+<img src="/codes/files/xml.gif" alt="demo.gif">
+</p>
 {{< /note >}}
-
-{{< img src="/codes/files/xml.gif" align="center">}}
-<br /> <br />
