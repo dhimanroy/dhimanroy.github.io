@@ -45,7 +45,7 @@ resume: "files/DhimanRoy_CV.pdf"
 # give as many as you want. use font-awesome for the icons.
 socialLinks:
 - name: Email
-  icon: "fas fa-paper-plane-0.75x"
+  icon: "fas fa-paper-plane"
   url: "dhimanroy117@gmail.com"
 
 - name: LinkedIn
@@ -53,7 +53,7 @@ socialLinks:
   url: "#"
 
 - name: Google Scholar
-  icon: "ai ai-google-scholar ai-1.25x"
+  icon: "ai ai-google-scholar"
   url: "https://scholar.google.com/citations?user=4OYyS6AAAAAJ"
 
 - name: Researchgate
