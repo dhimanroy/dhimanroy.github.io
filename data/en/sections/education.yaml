@@ -29,6 +29,51 @@ degrees:
 #    url: "#"
 #  - title: Nullam vitae orci tincidunt purus viverra pulvinar.
 #    url: "#"
+
+
+- name: M.Sc. in Mechanical Engineering
+  icon: fa-microscope
+  timeframe: 2021 - Ongoing
+  institution:
+    name: Bangladesh University of Engineering and Technology
+    url: "https://www.buet.ac.bd/"
+  grade: #(optional)
+    show: false
+    scale: CGPA
+    achieved: 
+    outOf: 4
+  takenCourses: #(optional)
+    showCourses: true    #if true, will show this div
+    showGrades: false     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+    courses:
+    - name: Advanced Numerical Analysis
+      achieved: 
+      outOf: 4
+    - name: Mechanics of Inviscid Incompressible Fluid
+      achieved: 
+      outOf: 4
+    - name: 
+      achieved: Mechanics of Viscous Fluid
+      outOf: 4
+    
+  publications: #(optional)
+    showPublications: false   #if true, will show this div
+    pubList:
+    - title: publication 1
+      url: ""
+    - title: publication 2
+      url: ""
+  #extracurricularActivities: #(optional)
+  extracurricular:
+    show: false
+    activities:
+    - Football
+    - Film Making
+    - Origami
+    - Cultural
+
+
+
 - name: B.Sc. in Mechanical Engineering
   icon: fa-graduation-cap
   timeframe: 2015 - 2019
