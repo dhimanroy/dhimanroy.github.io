@@ -16,3 +16,16 @@ summary:
   - I love to code
   - I work on computational fluid dynamics
   - I am a Research Assistant at MμFEL, BUET
+
+
+# latest news about yourself/ your work. 
+# url without :// will be replace by "baseurl/#url"
+# title supports mark down
+
+latestNews:
+  showLatestNews: true
+  newsList:
+  - title: <i>News 1</i>
+    url: http://ugadmission.buet.ac.bd/
+  - title: News 2
+    url: publications

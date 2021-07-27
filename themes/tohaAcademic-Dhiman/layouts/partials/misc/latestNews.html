@@ -1,0 +1,7 @@
+{{ if in .url "://"}}
+    <a class="text-white" href="{{ .url }}" target="_blank">{{ .title | markdownify }}</a>
+{{ else }}
+<a class="text-white" href="#{{ .url }}">{{ .title | markdownify }}</a>
+{{ end }}
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b style="color: aliceblue;">::</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        

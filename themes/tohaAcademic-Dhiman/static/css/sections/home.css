@@ -37,6 +37,11 @@
   height: 60%;
 }
 
+.news {
+  width: 20%;
+  white-space: nowrap
+}
+
 .home img {
   width: 148px;
   height: 148px;

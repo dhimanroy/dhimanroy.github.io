@@ -100,11 +100,12 @@
     }
     </style>
     <span class="on-the-fly-behavior"></span>
-  <div
-    id="homePageBackgroundImageDivStyled"
+    
+  <div id="homePageBackgroundImageDivStyled"
     class="background container-fluid"
   ></div>
-  <div class="container content text-center">
+
+  <div class="container content text-center">    
     <img src="{{ $authorImage.RelPermalink }}"
       class="rounded-circle mx-auto d-block img-fluid"
       alt="Author Image"
@@ -127,7 +128,30 @@
         {{ if .section.id }}
           {{ $sectionID = .section.id }}
         {{ end }}
-        <a href="#{{ $sectionID }}" aria-label="{{ i18n "read" }} {{ i18n "more" }} - {{ $name }}"><i class="arrow bounce fa fa-chevron-down"></i></a>
+
+    {{ if not $author.latestNews.showLatestNews }}
+    <a href="#{{ $sectionID }}" aria-label="{{ i18n "read" }} {{ i18n "more" }} - {{ $name }}"><i class="arrow bounce fa fa-chevron-down"></i></a>
+    {{ end }}
+
+    {{ if $author.latestNews.showLatestNews }}
+        <div class="fluid">
+          <div style="margin-top: 7.5%; height: 40px;" class="bg-transparent">
+            <div class="row">
+              <div class="col-md-12">
+                  <div class="d-flex breaking-news align-middle" style="font-size: 20px;">
+                      <div class="bg-danger text-white news" style="display: inline-block;">Latest News</div>
+                      <marquee class="news-scroll border-top border-danger border-bottom border-danger" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
+                      
+                        {{ range $author.latestNews.newsList }}
+                          {{ partial "misc/latestNews.html" . }}
+                        {{ end}}
+                      </marquee>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ end }}
       {{ end }}
     {{ end }}
   </div>
