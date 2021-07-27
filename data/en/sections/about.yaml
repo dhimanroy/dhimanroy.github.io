@@ -57,16 +57,16 @@ socialLinks:
   url: "https://scholar.google.com/citations?user=4OYyS6AAAAAJ"
 
 - name: Researchgate
-  icon: "ai ai-researchgate ai-1.5x"
+  icon: "fab fa-researchgate"
   url: "#"
 
 - name: Github
   icon: "fab fa-github"
   url: "https://www.github.com/dhimanroy"
 
-- name: Facebook
-  icon: "fab fa-facebook"
-  url: "https://facebook.com/yor.namihd"
+#- name: Facebook
+#  icon: "fab fa-facebook"
+#  url: "https://facebook.com/yor.namihd"
 
 # Show your badges
 # You can show your verifiable certificates from https://www.credly.com.
