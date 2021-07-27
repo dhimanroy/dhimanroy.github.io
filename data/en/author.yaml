@@ -25,7 +25,7 @@ summary:
 latestNews:
   showLatestNews: true
   newsList:
-  - title: Research papers published on Elsevier-Composite Structures and MDPI-Material
-    url: http://ugadmission.buet.ac.bd/
-  - title: News 2
-    url: publications
+  - title: '<text style="color: #248aaa">[July 27, 2021]</text> Lockdown to get stricter'
+    url: https://www.thedailystar.net/health/disease/coronavirus/events-who/lockdown/news/lockdown-get-stricter-2138401
+  - title: '<text style="color: #248aaa">[July 24, 2021]</text> Started classes of M.Sc. in Mechnical Engineering Program.'
+    url: education
