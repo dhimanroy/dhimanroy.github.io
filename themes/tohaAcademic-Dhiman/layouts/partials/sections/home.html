@@ -139,7 +139,7 @@
             <div class="row">
               <div class="col-md-12">
                   <div class="d-flex breaking-news align-middle" style="font-size: 20px;">
-                      <div class="bg-danger text-white" style="display: inline-block; width: 20%;">Latest News</div>
+                      <div class="bg-danger text-white" style="display: inline-block; width: 10em;">Latest News</div>
                       <marquee class="news-scroll text-middle border-top border-danger border-bottom border-danger" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
                         {{ range $author.latestNews.newsList }}
                           {{ partial "misc/latestNews.html" . }}
