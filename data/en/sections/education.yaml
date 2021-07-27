@@ -52,8 +52,8 @@ degrees:
     - name: Mechanics of Inviscid Incompressible Fluid
       achieved: 
       outOf: 4
-    - name: 
-      achieved: Mechanics of Viscous Fluid
+    - name: Mechanics of Viscous Fluid
+      achieved: 
       outOf: 4
     
   publications: #(optional)
