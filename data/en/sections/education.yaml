@@ -81,7 +81,7 @@ degrees:
     name: Bangladesh University of Engineering and Technology
     url: "https://www.buet.ac.bd/"
   grade: #(optional)
-    show: true
+    show: false
     scale: CGPA
     achieved: 3.57
     outOf: 4
@@ -123,7 +123,7 @@ degrees:
     name: Cantonment Public School & College, Rangpur
     url: "http://cpscr.edu.bd"
   grade: #(optional)
-    show: true
+    show: false
     scale: GPA
     achieved: 5
     outOf: 5
@@ -139,7 +139,7 @@ degrees:
     name: Rangpur Zilla School
     url: "http://www.rangpurzillaschool.edu.bd"
   grade: #(optional)
-    show: true
+    show: false
     scale: GPA
     achieved: 5
     outOf: 5
