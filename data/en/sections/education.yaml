@@ -113,8 +113,8 @@ degrees:
     show: true
     activities:
     - Member at অনুরণন (BUET Math Club)
-    - Organizer of Fury Race, Mechanical Festival 2018
-    - Academic Team Member, 2016 - 2018
+    - Organizer of Fury Race, Mechanical Festival, 2018
+    - Academic Team Member, Bangladesh Mathematical Olympiad, 2016 - 2018
 
 - name: Higher Secondary School Certificate
   icon: fa-university
@@ -146,5 +146,5 @@ degrees:
   extracurricular: #(optional)
     show: true
     activities:
-    - Bangladesh Mathematical Olympiad
-    - Bangladesh Astronomical Olympiad
+    - Participated in Bangladesh Mathematical Olympiad
+    - Participated in Bangladesh Astronomical Olympiad
