@@ -40,7 +40,7 @@ googleAnalytics: UA-199814292-1
 
 # Enable global emoji support
 enableEmoji: true
-
+enableGitInfo: true
 # Site parameters
 params:
   # Background image of the landing page
