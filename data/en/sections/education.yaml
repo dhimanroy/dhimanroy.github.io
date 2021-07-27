@@ -1,9 +1,9 @@
 # section information
 section:
-  name: Curriculum Vitae
+  name: Education
   hideTitle: true
   subName: Education
-  id: cv
+  id: education
   template: sections/cv.html # Use "sections/education-alt.html for alternate template.
   enable: true
   weight: 2
