@@ -46,7 +46,7 @@ resume: "files/DhimanRoy_CV.pdf"
 socialLinks:
 - name: Email
   icon: "fas fa-envelope"
-  url: "****@gmail.com"
+  url: "dhimanroy117@gmail.com"
 
 - name: LinkedIn
   icon: "fab fa-linkedin"
@@ -54,7 +54,7 @@ socialLinks:
 
 - name: Google Scholar
   icon: "ai ai-google-scholar ai-1.5x"
-  url: "#"
+  url: "https://scholar.google.com/citations?user=4OYyS6AAAAAJ"
 
 - name: Researchgate
   icon: "ai ai-researchgate ai-1.5x"
@@ -66,7 +66,7 @@ socialLinks:
 
 - name: Facebook
   icon: "fab fa-facebook"
-  url: "#"
+  url: "https://facebook.com/yor.namihd"
 
 # Show your badges
 # You can show your verifiable certificates from https://www.credly.com.
