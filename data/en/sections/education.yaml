@@ -86,36 +86,34 @@ degrees:
     achieved: 3.57
     outOf: 4
   takenCourses: #(optional)
-    showCourses: false    #if true, will show this div
+    showCourses: true    #if true, will show this div
     showGrades: false     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
     courses:
-    - name: Data Structures and Algorithm
-      achieved: 3.75
+    - name: Computer Programming Language
+      achieved: 4
       outOf: 4
-    - name: Network Security
-      achieved: 3.80
+    - name: Aerodynamics
+      achieved: 4
       outOf: 4
-    - name: Operating System
+    - name: Applied Engineering Mathematics
       achieved: 3.5
       outOf: 4
-    - name: Artificial Intelligent
-      achieved: 3.75
+    - name: Theory of Structures
+      achieved: 4
       outOf: 4
+      
   publications: #(optional)
-    showPublications: false   #if true, will show this div
+    showPublications: true   #if true, will show this div
     pubList:
-    - title: publication 1
-      url: ""
-    - title: publication 2
-      url: ""
+    - title: A Computational Analysis of Fluid Mixing Characteristics Inside a Microchannel by Pulsating Streams.
+      url: "https://link.springer.com/chapter/10.1007%2F978-981-15-5183-3_20"
+
   #extracurricularActivities: #(optional)
   extracurricular:
-    show: false
+    show: true
     activities:
-    - Football
-    - Film Making
-    - Origami
-    - Cultural
+    - Member at অনুরণন (BUET Math Club)
+    - Organizer of Fury Race, Mechanical Festival 2018
 
 - name: Higher Secondary School Certificate
   icon: fa-university
