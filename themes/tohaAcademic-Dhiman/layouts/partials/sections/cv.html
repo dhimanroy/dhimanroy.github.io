@@ -82,7 +82,7 @@
                                         {{ end }}
                                     </ul>
                                 {{ end }}
-                                {{ if gt (len .takenCourses.courses ) 2 }}
+                                {{ if gt (len .takenCourses.courses ) 3 }}
                                     <button type="button" class="btn btn-link show-more-btn pt-0 {{ if .takenCourses.showGrades }}ml-1{{ else }}ml-2{{ end }}"
                                     onclick="toggleCourseVisibility(this);" id="show-more-btn">{{ i18n "show_more"}}</button>
                                     <button type="button" class="btn btn-link show-more-btn hidden pt-0 {{ if .takenCourses.showGrades }}ml-1{{ else }}ml-2{{ end }}"
