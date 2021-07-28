@@ -23,7 +23,7 @@ summary:
 # title supports mark down
 
 latestNews:
-  showLatestNews: true
+  showLatestNews: false
   newsList:
   - title: '<text style="color: #248aaa">[July 27, 2021]</text> Lockdown to get stricter'
     url: https://www.thedailystar.net/health/disease/coronavirus/events-who/lockdown/news/lockdown-get-stricter-2138401
