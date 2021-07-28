@@ -118,7 +118,7 @@
     <ul id="typing-carousel-data">
       {{ if $author.summary }}
         {{ range $author.summary }}
-          <li>{{ . }}</li>
+          <li>{{ . | markdownify }}</li>
         {{ end}}
       {{ end }}
     </ul>
