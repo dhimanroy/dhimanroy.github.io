@@ -43,7 +43,7 @@ enableEmoji: true
 
 
 # Enable git info for last modified date show
-enableGitInfo: true
+enableGitInfo: false
 
 
 # Site parameters
