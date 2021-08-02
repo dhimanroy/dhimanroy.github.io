@@ -40,7 +40,28 @@ googleAnalytics: UA-199814292-1
 
 # Enable global emoji support
 enableEmoji: true
+
+
+# Enable git info for last modified date show
 enableGitInfo: true
+
+frontmatter:
+  date:
+  - date
+  - publishDate
+  - lastmod
+  expiryDate:
+  - expiryDate
+  lastmod:
+  - :git
+  - lastmod
+  - date
+  - publishDate
+  publishDate:
+  - publishDate
+  - date
+
+  
 # Site parameters
 params:
   # Background image of the landing page
