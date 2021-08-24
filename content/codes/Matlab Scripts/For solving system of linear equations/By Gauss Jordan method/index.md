@@ -17,7 +17,7 @@ preparing assignments.
 ```matlab
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Title:  Gauss Elimination with partial pivoting                 %
+%   Title:  Gauss Jordan with partial pivoting                      %
 %   Author: Dhiman Roy, Dept. of ME (BUET)                          %
 %   Date:   August 23, 2021                                         %
 %   Licensed under Creative Commons                                 %

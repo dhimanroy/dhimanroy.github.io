@@ -8,4 +8,11 @@ menu:
     parent: solving-SLE
     weight: 3
 ---
-test
+{{< note title="Script for Jacobi method" >}}
+Will be updated soon.
+<br/>
+```matlab
+
+
+
+```

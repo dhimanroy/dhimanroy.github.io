@@ -8,4 +8,11 @@ menu:
     parent: solving-SLE
     weight: 5
 ---
-test
+{{< note title="Script for SOR method" >}}
+Will be updated soon.
+<br/>
+```matlab
+
+
+
+```
