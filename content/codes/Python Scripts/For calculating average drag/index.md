@@ -1,12 +1,13 @@
 ---
 title: Python script for calculating average drag coefficient
-weight: 24
+date: 2021-03-28
+weight: 1
 menu:
   codes:
     name: For calculating average drag coefficient
     identifier: codes-python-calculateAverageDragCoefficient
     parent: codes-python
-    weight: 24
+    weight: 1
 ---
 {{< note title="Python script for calculating average drag coefficient" >}}
 ```python

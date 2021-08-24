@@ -4,6 +4,6 @@ menu:
   codes:
     name: Batch Scripts
     identifier: codes-batchScripts
-    weight: 21
+    weight: 2
 ---
 # Bash Notes

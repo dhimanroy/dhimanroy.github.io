@@ -1,12 +1,12 @@
 ---
 title: Scheme code for creating points and monitors
-weight: 22
+weight: 1
 menu:
   codes:
     name: For creating points and monitors
     identifier: codes-scheme-createPointsAndMonitors
     parent: codes-scheme
-    weight: 22
+    weight: 1
 ---
 {{< note title="Scheme code for creating points and monitors" >}}
 ```scheme

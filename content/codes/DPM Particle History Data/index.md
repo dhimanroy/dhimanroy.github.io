@@ -1,11 +1,11 @@
 ---
 title: Script for decoding Particle History Data (.xml) files (Exported from Ansys FLUENT)
-weight: 27
+weight: 35
 menu:
   codes:
     name: DPM Particle History
     identifier: codes-decoding-xml
-    weight: 27
+    weight: 35
 ---
 {{< note title="Script for decoding Particle History Data (.xml) files (Exported from Ansys FLUENT)" >}}
 

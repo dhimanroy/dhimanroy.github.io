@@ -4,5 +4,5 @@ menu:
   codes:
     name: Scheme Codes
     identifier: codes-scheme
-    weight: 22
+    weight: 3
 ---

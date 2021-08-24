@@ -1,12 +1,13 @@
 ---
 title: Python script for making PDF of exam routine and sending it to respective faculty member
-weight: 26
+date: 2021-04-04
+weight: 3
 menu:
   codes:
     name: For making PDF of exam routine and sending mail
     identifier: codes-python-makingPDFandsend
     parent: codes-python
-    weight: 26
+    weight: 3
 ---
 {{< note title="Python script for making PDF of exam routine and sending it to respective faculty member" >}}
 This script reads exam schedule from an Excel file and creates a pdf that is sent to the respective faculty member. This script helped me a lot while performing as an exam coordinator in Sonargaon University (SU).

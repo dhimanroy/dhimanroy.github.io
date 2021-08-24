@@ -39,7 +39,7 @@ outputs:
 googleAnalytics: UA-199814292-1
 
 # Enable global emoji support
-enableEmoji: true
+enableEmoji: false
 
 
 # Enable git info for last modified date show

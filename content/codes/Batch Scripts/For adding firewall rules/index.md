@@ -1,12 +1,12 @@
 ---
 title: Batch script for adding firewall rules
-weight: 21
+weight: 1
 menu:
   codes:
     name: For adding firewall rules
     identifier: codes-batchScripts-addFirewall
     parent: codes-batchScripts
-    weight: 21
+    weight: 1
 ---
 
 

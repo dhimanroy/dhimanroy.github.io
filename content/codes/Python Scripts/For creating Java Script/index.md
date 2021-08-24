@@ -1,12 +1,13 @@
 ---
 title: Python script for creating Java Script that populates a webform
-weight: 25
+date: 2021-04-12
+weight: 2
 menu:
   codes:
     name: For creating Java Script that populates a webform
     identifier: codes-python-creatingJavaScriptThatPopulatesAwebform
     parent: codes-python
-    weight: 25
+    weight: 2
 ---
 {{< note title="Python script for creating Java Script that populates a webform" >}}
 This script reads the obtained marks of the students from an Excel file and creates a Java Script that can be used to populate a certain webform automatically. In short, data entry is not a problem anymore.

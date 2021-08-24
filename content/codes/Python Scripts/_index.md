@@ -4,5 +4,5 @@ menu:
   codes:
     name: Python Scripts
     identifier: codes-python
-    weight: 23
+    weight: 4
 ---
