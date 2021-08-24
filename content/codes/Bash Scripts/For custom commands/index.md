@@ -11,7 +11,9 @@ menu:
 
 
 {{< note title="Bash codes for custom commands" >}}
+
 ```bash
+
 alias goto='/mnt/c/Program\ Files/Opera/launcher.exe'
 #alias search='goto www.google.com/search?q='
 g() {

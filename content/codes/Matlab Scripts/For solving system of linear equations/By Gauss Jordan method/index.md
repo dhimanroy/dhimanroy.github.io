@@ -102,3 +102,4 @@ function [x] = gaussJordanPartPiv(A, b)
 end
 
 ```
+{{< /note >}}

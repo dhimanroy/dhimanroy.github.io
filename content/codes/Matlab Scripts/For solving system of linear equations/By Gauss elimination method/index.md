@@ -79,3 +79,4 @@ function [x] = gaussElimPartPiv(A, b)
 end
 
 ```
+{{< /note >}}

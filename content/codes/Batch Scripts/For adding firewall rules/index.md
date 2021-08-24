@@ -1,6 +1,6 @@
 ---
 title: Batch script for adding firewall rules
-date: 
+date: 2015-10-09
 weight: 1
 menu:
   codes:
@@ -13,8 +13,12 @@ menu:
 
 {{< note title="Batch script for adding firewall rules" >}}
 This is a very helpful script found from <a href="https://sites.google.com/site/mytools4000/home/allow-block-multiple-programs-through-windows-7-firewall">mytools4000.</a>
-This script is created by CHARLES DE HAVILLAND.<br/>
+This script is created by CHARLES DE HAVILLAND.
+<br/>
+
+
 ```batch
+
 @echo off
 REM      BATCH FILE CREATED BY CHARLES DE HAVILLAND 10/09/2015
 cls
