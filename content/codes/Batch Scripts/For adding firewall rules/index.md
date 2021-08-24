@@ -12,7 +12,7 @@ menu:
 
 
 {{< note title="Batch script for adding firewall rules" >}}
-This is a very helpful script found from <a href="https://sites.google.com/site/mytools4000/home/allow-block-multiple-programs-through-windows-7-firewall">mytools4000.</a>
+This is a very helpful script found from <a href="https://sites.google.com/site/mytools4000/home/allow-block-multiple-programs-through-windows-7-firewall" target="_blank">mytools4000.</a>
 This script is created by CHARLES DE HAVILLAND.
 <br/>
 
