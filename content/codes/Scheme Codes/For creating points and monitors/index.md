@@ -1,5 +1,6 @@
 ---
 title: Scheme code for creating points and monitors
+date: 2021-02-07
 weight: 1
 menu:
   codes:

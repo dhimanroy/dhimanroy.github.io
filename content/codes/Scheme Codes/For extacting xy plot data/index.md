@@ -1,5 +1,6 @@
 ---
 title: Scheme code for extacting xy plot data
+date: 2021-02-08
 menu:
   codes:
     name: For extacting xy plot data
