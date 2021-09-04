@@ -10,7 +10,7 @@ researchContents:
 
 - content:
   title: '<p class="text-secondary">[Current Project]</p>Modelling the exposure risk tradeoff between public transit and private paratransit for transport decision making in the era of Covid19'
-  image: "files/research/shield0-5ms-10micron.webm"
+  video: "files/research/shield0-5ms-10micron.webm" #you can use gif jpeg also, just replaace video with image
   description: 'The COVID19 pandemic has massively disrupted the transport sector and economic activities. 
                 In the project countries, motorcycle-based paratransits are banned from operating in order to maintain safe distances. 
                 In addition to disrupting travel and affecting the primarily poor users (prices in other modes have gone up), 
@@ -20,7 +20,8 @@ researchContents:
 
 - content:
   title: Microfluidic Mixing Inside a T-shaped Channel
-  image: "files/research/micromixingInT.gif"
+  #image: "files/research/micromixingInT.gif"
+  video: "files/research/micromixingInT.webm"
   description: 'In a microfluidic channel, mixing becomes troublesome as it is obviously constrained by mass diffusion at low Reynolds number. 
                 This work computationally analyzes the use of pulsating streams for possible enhancement of fluid mixing in a microchannel at Reynolds number of 0.2. 
                 A simple two-dimensional T-shaped microchannel is considered for this study.'
