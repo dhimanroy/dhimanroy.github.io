@@ -94,17 +94,17 @@ badges:
 - type: certification
   name: Me
   url: ""
-  badge: "files/dmn.png"
+  badge: "files/dmn.webp"
 
 - type: certification
   name: Group Work
   url: ""
-  badge: "files/groupWork.png"
+  badge: "files/groupWork.webp"
 
 - type: certification
   name: Me
   url: ""
-  badge: "files/dmn2.png"
+  badge: "files/dmn2.webp"
 
 - type: soft-skill-indicator
   name: Leadership
