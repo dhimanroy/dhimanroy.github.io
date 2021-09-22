@@ -1,0 +1,102 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	height: 100vh;
+	background-color: #333;
+}
+#logo{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-70%);
+}
+#logo path:nth-child(1){
+	stroke-dasharray: 504px;
+	stroke-dashoffset: 504px;
+	animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(2){
+	stroke-dasharray: 428px;
+	stroke-dashoffset: 428px;
+	animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(3){
+	stroke-dasharray: 539px;
+	stroke-dashoffset: 539px;
+	animation: line-anim 2s ease forwards 1s;
+}
+#logo path:nth-child(4){
+	stroke-dasharray: 553px;
+	stroke-dashoffset: 553px;
+	animation: line-anim 2s ease forwards 1s;
+}
+#logo path:nth-child(5){
+	stroke-dasharray: 410px;
+	stroke-dashoffset: 410px;
+	animation: line-anim 1s ease forwards 2s;
+}
+#logo path:nth-child(6){
+	stroke-dasharray: 365px;
+	stroke-dashoffset: 365px;
+	animation: line-anim 2s ease forwards 2s;
+}
+#logo path:nth-child(7){
+	stroke-dasharray: 384px;
+	stroke-dashoffset: 384px;
+	animation: line-anim 2s ease forwards 2s;
+}
+#logo path:nth-child(8){
+	stroke-dasharray: 485px;
+	stroke-dashoffset: 485px;
+	animation: line-anim 1s ease forwards 3s;
+}
+#logo path:nth-child(9){
+	stroke-dasharray: 424px;
+	stroke-dashoffset: 424px;
+	animation: line-anim 2s ease forwards 3s;
+}
+#logo path:nth-child(10){
+	stroke-dasharray: 171px;
+	stroke-dashoffset: 171px;
+	animation: line-anim 1s ease forwards 3s;
+}
+#logo path:nth-child(11){
+	stroke-dasharray: 424px;
+	stroke-dashoffset: 424px;
+	animation: line-anim 2s ease forwards 3s;
+}
+#logo path:nth-child(12){
+	stroke-dasharray: 384px;
+	stroke-dashoffset: 384px;
+	animation: line-anim 2s ease forwards 11s;
+}
+
+@keyframes line-anim {
+	to{
+		stroke-dashoffset: 0;
+	}
+}
+
+.footer-heart{text-align:center;
+	color: white;
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.footer-heart a{border-bottom: 1px solid #453886;color: #453886;padding-bottom: .25em; text-decoration: none;}
+
+.footer-heart a:hover{color:#2196f3; background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: .3em;
+  text-decoration: none;}
+
+.emoji{vertical-align: middle;}
