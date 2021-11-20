@@ -23,9 +23,9 @@ summary:
 # title supports mark down
 
 latestNews:
-  showLatestNews: false
+  showLatestNews: true
   newsList:
-  - title: '<text style="color: #248aaa">[July 27, 2021]</text> Lockdown to get stricter'
-    url: https://www.thedailystar.net/health/disease/coronavirus/events-who/lockdown/news/lockdown-get-stricter-2138401
-  - title: '<text style="color: #248aaa">[July 24, 2021]</text> Started classes of M.Sc. in Mechnical Engineering Program.'
-    url: education
+  - title: '<text style="color: #248aaa">[November 17, 2021]</text> Research article on Covid-19 exposure risk mitigation is publised online.'
+    url: https://aip.scitation.org/doi/10.1063/5.0069454
+  - title: '<text style="color: #248aaa">[October 29, 2021]</text> Research article has got featured in Physics of Fluids.'
+    url: https://aip.scitation.org/doi/10.1063/5.0069454
