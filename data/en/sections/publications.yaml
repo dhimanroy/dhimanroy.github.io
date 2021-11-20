@@ -6,21 +6,22 @@ section:
   showOnNavbar: true
 
 publicationList:
-#- publication:
-#    type: Journal Publications               #Journal or Conference or Book Chapter
-#  entry:
-#    - title: '<text style="color: #aa4e24">Roy, D.</text>, Hasan, T., Hasan, A.T. and Islam, A.S., 2021. A Computational Analysis of Fluid Mixing Characteristics Inside a Microchannel by Pulsating Streams. In <i>Proceedings of 16th Asian Congress of Fluid Mechanics</i> (pp. 185-193). Springer, Singapore.'
-#      url: 10.1007/978-981-15-5183-3_20
-#      abstract:
-#        show: ture
-#        text: 'In a microfluidic channel, mixing becomes troublesome as it is obviously constrained by mass diffusion at low Reynolds number. This work computationally analyzes the use of pulsating streams for possible enhancement of fluid mixing in a microchannel at Reynolds number of 0.2. A simple two-dimensional T-shaped microchannel is considered for this study. Two pulsatile streams are kept out of phase by 90° while the pulsation frequency is kept constant at 7.5 Hz. However, the ratio of pulse amplitude to base velocity has been varied in the range of 5.0–12.5. Moreover, the ratio of pulse amplitudes of two streams has been changed from 1.0 to 2.0. It is observed that an increment of pulse amplitude to base velocity ratio results an increase in the degree of mixing inside the microchannel. In addition, fluctuation characteristics in mixing degree decrease with an increase in pulse amplitude. In case of varied pulse amplitudes of two streams, results showed that the quality of mixing is enhanced by increasing the ratio until 1.7. Finally, the required minimum length of a microchannel for a specific degree of mixing is identified from the results of the present work.'
-#  
-#    - title: Paper Title 2
-#      year: 2014
-#      url:
-#      abstract:
-#        show: ture
-#        text: journal paper 2 abstract
+
+- publication:
+   type: Journal Publication                    #Journal or Conference or Book Chapter
+  entry:
+   - title: 'a'
+     url: 10.1063/5.0069454
+     abstract:
+       show: ture
+       text: 'A dominant mode of transmission for the respiratory disease COVID-19 is via airborne virus-carrying aerosols. As national lockdowns are lifted and people begin to travel once again, an assessment of the risk associated with different forms of public transportation is required. This paper assesses the risk of transmission in the context of a ride-sharing motorbike taxi—a popular choice of paratransit in South and South-East Asia and Sub-Saharan Africa. Fluid dynamics plays a significant role in understanding the fate of droplets ejected from a susceptible individual during a respiratory event, such as coughing. Numerical simulations are employed here using an Eulerian–Lagrangian approach for particles and the Reynolds-averaged Navier–Stokes method for the background air flow. The driver is assumed to be exhaling virus laden droplets, which are transported toward the passenger by the background flow. A single cough is simulated for particle sizes 1, 10, 50 𝜇m, with motorbike speeds 1, 5, 15 m/s. It has been shown that small and large particles pose different types of risk. Depending on the motorbike speed, large particles may deposit onto the passenger, while smaller particles travel between the riders and may be inhaled by the passenger. To reduce risk of transmission to the passenger, a shield is placed between the riders. The shield not only acts as a barrier to block particles, but also alters the flow field around the riders, pushing particles away from the passenger. The findings of this paper therefore support the addition of a shield potentially making the journey safer.'
+ 
+  #  - title: Paper Title 2
+  #    year: 2014
+  #    url:
+  #    abstract:
+  #      show: ture
+  #      text: journal paper 2 abstract
 
 - publication:
     type: Conference Publication               #Journal or Conference or Book Chapter
