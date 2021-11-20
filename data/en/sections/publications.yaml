@@ -1,5 +1,5 @@
 section:
-  name: Publication(s)
+  name: Publications
   id: publications
   enable: true
   weight: 6
@@ -10,7 +10,7 @@ publicationList:
 - publication:
    type: Journal Publication                    #Journal or Conference or Book Chapter
   entry:
-   - title: 'a'
+   - title: '[1] Hetherington, R., Toufique Hasan, A., Khan, A., <text style="color: #aa4e24">Roy, D.</text>, Salehin, M. and Wadud, Z., 2021. <b>Exposure risk analysis of COVID-19 for a ride-sharing motorbike taxi</b>. <i>Physics of Fluids</i>, 33(11), p.113319.'
      url: 10.1063/5.0069454
      abstract:
        show: ture
