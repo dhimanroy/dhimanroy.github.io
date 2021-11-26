@@ -1,7 +1,8 @@
----
+<!-- ---
 title: Batch script for adding firewall rules
 date: 2015-10-09
 weight: 2
+layout: none
 menu:
   codes:
     name: For adding firewall rules
@@ -95,4 +96,4 @@ ECHO.
 ECHO.
 :END
 ```
-{{< /note >}}
+{{< /note >}} -->
