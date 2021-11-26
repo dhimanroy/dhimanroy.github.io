@@ -9,11 +9,10 @@ menu:
     weight: 11
 ---
 {{< note title="Bash script for running a phython script in each subdirectory" >}}
-This shell script which is developed to batch process simulation results runs a python script in each subdirectory of a parent folder.
+This shell script which is developed to batch process simulation results, runs a python script in each subdirectory of a parent folder.
 <br/>
 
 ```bash
-
 storeDir="processedData"
 pyFile="dataExtract.py"
 
@@ -35,7 +34,5 @@ mv A*.dat "$storeDir"
 
 echo "Files are moved to $storeDir."
 echo "Done..."
-
-
 ```
 {{< /note >}}
