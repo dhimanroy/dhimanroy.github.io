@@ -9,7 +9,7 @@ menu:
     weight: 4
 ---
 {{< note title="Script for Gauss Seidel method" >}}
-This matlab script can solve a system of linear equations by Gauss Seidel method, an iterative method. Co-efficeint matrix, contant vector and tolerence are be prompted for user input. 
+This matlab script can solve a system of linear equations by Gauss Seidel method, an iterative method. Co-efficeint matrix, contant vector, initial guesses and tolerence are be prompted for user input. 
 <br/>
 ```matlab
 

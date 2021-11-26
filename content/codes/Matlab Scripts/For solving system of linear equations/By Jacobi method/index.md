@@ -9,12 +9,12 @@ menu:
     weight: 3
 ---
 {{< note title="Script for Jacobi method" >}}
-
+Another iterative method for solving a system of linear equations.
 <br/>
 ```matlab
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Title:  Jacobi Method                                           %
+%   Title:  Jacobi method                                           %
 %   Author: Dhiman Roy, Dept. of ME (BUET)                          %
 %   Date:   August 23, 2021                                         %
 %   Licensed under Creative Commons                                 %

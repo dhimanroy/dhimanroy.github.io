@@ -9,11 +9,11 @@ menu:
     weight: 5
 ---
 {{< note title="Script for SOR method" >}}
-
+Solves a system of linear equations by successive over relaxation, prompts for co-efficient matrix, contant vector, initial guesses and relaxation factor.
 <br/>
 ```matlab
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Title:  Jacobi Method                                           %
+%   Title:  SOR method                                              %
 %   Author: Dhiman Roy, Dept. of ME (BUET)                          %
 %   Date:   August 23, 2021                                         %
 %   Licensed under Creative Commons                                 %
