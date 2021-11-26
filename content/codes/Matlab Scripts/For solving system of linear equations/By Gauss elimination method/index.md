@@ -11,7 +11,7 @@ menu:
 {{< note title="Script for Gauss Elimination method" >}}
 
 This matlab script can solve a system of linear equations by Gauss elimination method with partial pivoting.
-Another fun fact is, this script can show the calculation steps. So, this script saves a lot of effort while
+Fun fact is, this script can show the calculation steps. So, A lot less effort is needed while
 preparing assignments.
 </br>
 ```matlab

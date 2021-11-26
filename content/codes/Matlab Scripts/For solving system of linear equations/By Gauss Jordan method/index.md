@@ -10,9 +10,8 @@ menu:
 ---
 {{< note title="Script for Gauss Jordan method" >}}
 
-This matlab script can solve a system of linear equations by Gauss Jordan method with partial pivoting.
-Another fun fact is, this script can show the calculation steps. So, this script saves a lot of effort while
-preparing assignments.
+This matlab script can solve a system of linear equations by Gauss Jordan method with partial pivoting. Co-efficeint matrix and contant vector are be prompted for user input. 
+Fun fact is, this script can show the calculation steps.
 </br>
 ```matlab
 
