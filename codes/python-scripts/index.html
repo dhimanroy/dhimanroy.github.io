@@ -1,10 +1,257 @@
-<!doctype html><html><head><title>Python Scripts</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css><link rel=icon type=image/png href=/images/site/favicon_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png><meta property="og:title" content="Python Scripts"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://dhimanroy.github.io/codes/python-scripts/"><meta property="og:updated_time" content="2021-04-12T00:00:00+00:00"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/notes.css><link rel=stylesheet href=/css/navigators/sidebar.css><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-199814292-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<!doctype html><html><head><title>Python Scripts</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css><link rel=icon type=image/png href=/images/site/favicon_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png><meta property="og:title" content="Python Scripts"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://dhimanroy.github.io/codes/python-scripts/"><meta property="og:updated_time" content="2021-11-07T00:00:00+00:00"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/notes.css><link rel=stylesheet href=/css/navigators/sidebar.css><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-199814292-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
 <span class=navbar-toggler-icon></span></button>
 <a class=navbar-brand href=/><img src=/images/site/main-logo_hu98b1e25c44cc76379c733a63e18e4740_51846_42x0_resize_box_2.png alt=Logo>
 Dhiman Roy</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
 <span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/site/main-logo_hu98b1e25c44cc76379c733a63e18e4740_51846_42x0_resize_box_2.png class=d-none id=main-logo alt=Logo>
-<img src=/images/site/inverted-logo_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/codes data-filter=all>Codes</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/codes/bash-scripts/>Bash Scripts</a><ul><li><a href=/codes/bash-scripts/for-custom-commands/ title="For custom commands">For custom commands</a></li><li><a href=/codes/bash-scripts/for-running-a-python-script-in-each-subdirectory/ title="For running a python script in each subdirectory">For running a python script in each subdirectory</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/batch-scripts/>Batch Scripts</a><ul><li><a href=/codes/batch-scripts/for-running-a-phython-script-in-each-subdirectory/ title="For running a phython script in each subdirectory">For running a phython script in each subdirectory</a></li><li><a href=/codes/batch-scripts/for-adding-firewall-rules/ title="For adding firewall rules">For adding firewall rules</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/scheme-codes/>Scheme Codes</a><ul><li><a href=/codes/scheme-codes/for-creating-points-and-monitors/ title="For creating points and monitors">For creating points and monitors</a></li><li><a href=/codes/scheme-codes/for-extacting-xy-plot-data/ title="For extacting xy plot data">For extacting xy plot data</a></li></ul></li><li><i class="fas fa-minus-circle"></i><a class=active href=/codes/python-scripts/>Python Scripts</a><ul class=active><li><a href=/codes/python-scripts/for-calculating-average-drag/ title="For calculating average drag coefficient">For calculating average drag coefficient</a></li><li><a href=/codes/python-scripts/for-creating-java-script/ title="For creating Java Script that populates a webform">For creating Java Script that populates a webform</a></li><li><a href=/codes/python-scripts/for-making-pdf-and-sending-it-to-the-faculty-member/ title="For making PDF of exam routine and sending mail">For making PDF of exam routine and sending mail</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/matlab-scripts/>Matlab Scripts</a><ul><li><i class="fas fa-plus-circle"></i><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/>For solving system of linear equations</a><ul><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-elimination-method/ title="Gauss Elimination method">Gauss Elimination method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-jordan-method/ title="Gauss Jordan method">Gauss Jordan method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-jacobi-method/ title="Jacobi method">Jacobi method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-seidel-method/ title="Gauss Seidel method">Gauss Seidel method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-successive-over-relaxation-method/ title="Successive Over Relaxation method">Successive Over Relaxation method</a></li></ul></li></ul></li><li><a href=/codes/dpm-particle-history-data/ title="DPM Particle History">DPM Particle History</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Python script for calculating average drag coefficient</span></h5><div class=card><div class=card-body><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#==========================================</span>
+<img src=/images/site/inverted-logo_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/codes data-filter=all>Codes</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/codes/bash-scripts/>Bash Scripts</a><ul><li><a href=/codes/bash-scripts/for-custom-commands/ title="For custom commands">For custom commands</a></li><li><a href=/codes/bash-scripts/for-running-a-python-script-in-each-subdirectory/ title="For running a python script in each subdirectory">For running a python script in each subdirectory</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/batch-scripts/>Batch Scripts</a><ul><li><a href=/codes/batch-scripts/for-running-a-phython-script-in-each-subdirectory/ title="For running a phython script in each subdirectory">For running a phython script in each subdirectory</a></li><li><a href=/codes/batch-scripts/for-adding-firewall-rules/ title="For adding firewall rules">For adding firewall rules</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/scheme-codes/>Scheme Codes</a><ul><li><a href=/codes/scheme-codes/for-creating-points-and-monitors/ title="For creating points and monitors">For creating points and monitors</a></li><li><a href=/codes/scheme-codes/for-extacting-xy-plot-data/ title="For extacting xy plot data">For extacting xy plot data</a></li></ul></li><li><i class="fas fa-minus-circle"></i><a class=active href=/codes/python-scripts/>Python Scripts</a><ul class=active><li><a href=/codes/python-scripts/for-calculating-average-drag/ title="For calculating average drag coefficient">For calculating average drag coefficient</a></li><li><a href=/codes/python-scripts/for-extracting-data/ title="For extracting data from ascii files">For extracting data from ascii files</a></li><li><a href=/codes/python-scripts/for-creating-java-script/ title="For creating Java Script that populates a webform">For creating Java Script that populates a webform</a></li><li><a href=/codes/python-scripts/for-making-pdf-and-sending-it-to-the-faculty-member/ title="For making PDF of exam routine and sending mail">For making PDF of exam routine and sending mail</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/matlab-scripts/>Matlab Scripts</a><ul><li><i class="fas fa-plus-circle"></i><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/>For solving system of linear equations</a><ul><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-elimination-method/ title="Gauss Elimination method">Gauss Elimination method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-jordan-method/ title="Gauss Jordan method">Gauss Jordan method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-jacobi-method/ title="Jacobi method">Jacobi method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-seidel-method/ title="Gauss Seidel method">Gauss Seidel method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-successive-over-relaxation-method/ title="Successive Over Relaxation method">Successive Over Relaxation method</a></li></ul></li></ul></li><li><a href=/codes/dpm-particle-history-data/ title="DPM Particle History">DPM Particle History</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Python script for extracting data from ascii files</span></h5><div class=card><div class=card-body><p>This script reads ascii files, collects desired data, process and store processed data to a .dat (actually a csv) file. This can also be done using <a href=https://en.wikipedia.org/wiki/Grep target=blank>grep</a> in linux terminal.</br></br>Now, let&rsquo;s jump into the script. Necessary packages like pandas, natsort, pathlib are imported first.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> os
+<span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
+<span style=color:#f92672>from</span> pathlib <span style=color:#f92672>import</span> Path
+<span style=color:#f92672>import</span> natsort
+</code></pre></div><p></br>Changing the working directory to the directory in which the file is located such that input files from this directory can be accessed.</br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>os<span style=color:#f92672>.</span>chdir(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>dirname(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>abspath(__file__)))
+CURR_DIR <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>getcwd()
+</code></pre></div><p></br>Finding the directory name (not the full path) and listing the input files.</br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>dmnFileName <span style=color:#f92672>=</span> CURR_DIR<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\\</span><span style=color:#e6db74>&#39;</span>)[<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>]
+
+temp_files <span style=color:#f92672>=</span> Path(CURR_DIR)<span style=color:#f92672>.</span>rglob(<span style=color:#e6db74>&#39;*.int&#39;</span>) <span style=color:#75715e>#reads .int files (input files) only</span>
+
+files <span style=color:#f92672>=</span> [x <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> temp_files]
+</code></pre></div><p></br>Making the skeleton.</br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>values <span style=color:#f92672>=</span> []
+
+<span style=color:#75715e># for A = 2.0</span>
+s2p0 <span style=color:#f92672>=</span> [a list of <span style=color:#ae81ff>33</span> numbers] <span style=color:#f92672>%</span> hidden data
+
+<span style=color:#75715e># for A = 1.5</span>
+s1p5 <span style=color:#f92672>=</span> [a list of <span style=color:#ae81ff>33</span> numbers] <span style=color:#f92672>%</span> hidden data
+
+<span style=color:#75715e># for A = 1.0</span>
+s1p0 <span style=color:#f92672>=</span> [a list of <span style=color:#ae81ff>33</span> numbers] <span style=color:#f92672>%</span> hidden data
+
+<span style=color:#75715e># for A = 0.5</span>
+s0p5 <span style=color:#f92672>=</span> [a list of <span style=color:#ae81ff>33</span> numbers] <span style=color:#f92672>%</span> hidden data
+
+n <span style=color:#f92672>=</span> float(dmnFileName<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;_&#39;</span>)[<span style=color:#ae81ff>1</span>])
+
+<span style=color:#66d9ef>if</span> n <span style=color:#f92672>==</span> <span style=color:#ae81ff>0.5</span>:
+    s <span style=color:#f92672>=</span> s0p5
+<span style=color:#66d9ef>elif</span> n <span style=color:#f92672>==</span> <span style=color:#ae81ff>1.0</span>:
+    s <span style=color:#f92672>=</span> s1p0
+<span style=color:#66d9ef>elif</span> n <span style=color:#f92672>==</span> <span style=color:#ae81ff>1.5</span>:
+    s <span style=color:#f92672>=</span> s1p5
+<span style=color:#66d9ef>elif</span> n <span style=color:#f92672>==</span> <span style=color:#ae81ff>2.0</span>:
+    s <span style=color:#f92672>=</span> s2p0
+</code></pre></div><p></br>Reading each file, collecting information, processing and storing for future use.</br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>for</span> name <span style=color:#f92672>in</span> natsort<span style=color:#f92672>.</span>os_sorted(files):
+    linesInHeader <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>
+    file <span style=color:#f92672>=</span> open(name,<span style=color:#e6db74>&#39;r&#39;</span>)
+    lines <span style=color:#f92672>=</span> file<span style=color:#f92672>.</span>readlines()[linesInHeader:]
+    lines <span style=color:#f92672>=</span> [line<span style=color:#f92672>.</span>strip(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span>) <span style=color:#66d9ef>for</span> line <span style=color:#f92672>in</span> lines]
+    lines <span style=color:#f92672>=</span> [line<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39; &#39;</span>) <span style=color:#66d9ef>for</span> line <span style=color:#f92672>in</span> lines]
+    integral <span style=color:#f92672>=</span> float(lines[<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>][<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>])
+    values<span style=color:#f92672>.</span>append(integral)
+    file<span style=color:#f92672>.</span>close()
+
+values <span style=color:#f92672>=</span> [val <span style=color:#f92672>*</span> <span style=color:#ae81ff>1000</span> <span style=color:#66d9ef>for</span> val <span style=color:#f92672>in</span> values]
+
+<span style=color:#66d9ef>try</span>:
+    data1 <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#34;s&#34;</span>: s[<span style=color:#ae81ff>0</span>:<span style=color:#ae81ff>17</span>],
+            <span style=color:#e6db74>&#34;value&#34;</span>: values[<span style=color:#ae81ff>0</span>:<span style=color:#ae81ff>17</span>]}    
+    df1 <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame(data1)
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span>, dmnFileName)
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Increasing</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>____________________&#39;</span>)
+    <span style=color:#66d9ef>print</span>(df1)
+    df1<span style=color:#f92672>.</span>to_csv(dmnFileName <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;-increasing.dat&#39;</span>, index <span style=color:#f92672>=</span> False)
+
+    data2 <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#34;s&#34;</span>: s[<span style=color:#ae81ff>16</span>:<span style=color:#ae81ff>33</span>],
+            <span style=color:#e6db74>&#34;value&#34;</span>: values[<span style=color:#ae81ff>16</span>:<span style=color:#ae81ff>33</span>]}    
+    df2 <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame(data2)
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Decreasing</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>____________________&#39;</span>)
+    <span style=color:#66d9ef>print</span>(df2)
+    df2<span style=color:#f92672>.</span>to_csv(dmnFileName <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;-decreasing.dat&#39;</span>, index <span style=color:#f92672>=</span> False)    
+
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>______Completed______</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
+
+<span style=color:#66d9ef>except</span>:
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>PLEASE CHECK IF THE TOTAL NUMBERS OF .int FILES is 33.</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
+
+<span style=color:#75715e>#input(&#34;\nHit Enter to return....\n&#34;)</span>
+
+</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Python script for making PDF of exam routine and sending it to respective faculty member</span></h5><div class=card><div class=card-body><p>This script reads exam schedule from an Excel file and creates a pdf that is sent to the respective faculty member. This script helped me a lot while performing as an exam coordinator in Sonargaon University (SU).</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#===================================================================#</span>
+<span style=color:#75715e>#   Title:  PDF Maker for faculties                                 #</span>
+<span style=color:#75715e>#   Author: Dhiman Roy, Dept. of ME (BUET)                          #</span>
+<span style=color:#75715e>#   Date:   April 04, 2021                                          #</span>
+<span style=color:#75715e>#   Licensed under Creative Commons                                 #</span>
+<span style=color:#75715e>#===================================================================#</span>
+
+<span style=color:#f92672>import</span> os
+os<span style=color:#f92672>.</span>chdir(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>dirname(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>abspath(__file__)))
+<span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
+<span style=color:#f92672>from</span> fpdf <span style=color:#f92672>import</span> FPDF
+
+myFile <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;routine.xlsx&#34;</span>
+data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(myFile, usecols <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Sort By&#34;</span>,<span style=color:#e6db74>&#34;Date&#34;</span>,<span style=color:#e6db74>&#34;Day&#34;</span>,<span style=color:#e6db74>&#34;Slot&#34;</span>,<span style=color:#e6db74>&#34;ERP Section Name&#34;</span>,<span style=color:#e6db74>&#34;Course Code&#34;</span>,<span style=color:#e6db74>&#34;Course Title&#34;</span>,<span style=color:#e6db74>&#34;Teacher&#34;</span>,<span style=color:#e6db74>&#34;Designation&#34;</span>,<span style=color:#e6db74>&#34;Class Schedule&#34;</span>], header <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>)
+
+teachers <span style=color:#f92672>=</span> data[<span style=color:#e6db74>&#34;Teacher&#34;</span>]<span style=color:#f92672>.</span>unique()<span style=color:#f92672>.</span>tolist()
+<span style=color:#66d9ef>print</span>(teachers)
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>makePdf</span>(df, teacher):
+    titles <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>columns<span style=color:#f92672>.</span>tolist()
+    <span style=color:#75715e>#print(titles )</span>
+    dfData <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>values<span style=color:#f92672>.</span>tolist()
+    dfData<span style=color:#f92672>.</span>insert(<span style=color:#ae81ff>0</span>, titles)
+    <span style=color:#75715e>#print(dfData[0])</span>
+    myPdf <span style=color:#f92672>=</span> FPDF()
+    myPdf<span style=color:#f92672>.</span>add_page(<span style=color:#e6db74>&#34;L&#34;</span>)
+
+    myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, size <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>)
+
+    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Routine for Final Assessment, Spring 21&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
+    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Department of Mechanical Engineering&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
+    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Sonargaon University (SU)&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
+    myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, size <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>)   
+    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>)
+    myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, <span style=color:#e6db74>&#34;I&#34;</span>,size <span style=color:#f92672>=</span> <span style=color:#ae81ff>12</span>)
+    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Teacher: &#34;</span> <span style=color:#f92672>+</span> teacher, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;L&#34;</span>)
+    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Designation: &#34;</span> <span style=color:#f92672>+</span> df[<span style=color:#e6db74>&#34;Designation&#34;</span>]<span style=color:#f92672>.</span>tolist()[<span style=color:#ae81ff>0</span>], ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;R&#34;</span>)
+    i<span style=color:#f92672>=</span><span style=color:#ae81ff>3</span>
+       
+    <span style=color:#66d9ef>for</span> dat <span style=color:#f92672>in</span> dfData:
+        <span style=color:#66d9ef>if</span> i <span style=color:#f92672>==</span> <span style=color:#ae81ff>3</span>:
+            myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, <span style=color:#e6db74>&#34;B&#34;</span>,size <span style=color:#f92672>=</span> <span style=color:#ae81ff>12</span>)
+        <span style=color:#66d9ef>else</span>:
+            myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>,size <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>)
+        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>25</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>0</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
+        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>25</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>1</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
+        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>35</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>2</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
+        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>25</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>4</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
+        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>120</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>5</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
+        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>45</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>3</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>)
+        i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+    myPdf<span style=color:#f92672>.</span>output(teacher <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.pdf&#34;</span>)
+    <span style=color:#66d9ef>print</span>(teacher <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.pdf is created.&#34;</span>)
+i <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>for</span> tea <span style=color:#f92672>in</span> teachers:
+    dmnData <span style=color:#f92672>=</span> data<span style=color:#f92672>.</span>loc[data<span style=color:#f92672>.</span>Teacher <span style=color:#f92672>==</span> tea]<span style=color:#f92672>.</span>sort_values(by <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Sort By&#34;</span>)     <span style=color:#75715e>#filters data using teachers list</span>
+
+    <span style=color:#66d9ef>del</span> dmnData[<span style=color:#e6db74>&#34;Sort By&#34;</span>]
+
+    dmnData[<span style=color:#e6db74>&#34;Date&#34;</span>] <span style=color:#f92672>=</span> dmnData[<span style=color:#e6db74>&#34;Date&#34;</span>]<span style=color:#f92672>.</span>dt<span style=color:#f92672>.</span>strftime(<span style=color:#e6db74>&#34;%B </span><span style=color:#e6db74>%d</span><span style=color:#e6db74>, %Y&#34;</span>)                      <span style=color:#75715e>#Converts date to string</span>
+
+    <span style=color:#75715e>#print(dmnData)</span>
+
+    makePdf(dmnData, tea)
+    i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+
+<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>*******</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Total </span><span style=color:#e6db74>%d</span><span style=color:#e6db74> files are saved.</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>********</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>))
+
+input(<span style=color:#e6db74>&#34;Hit Enter to exit...&#34;</span>)
+</code></pre></div><p><br>The following script can send the generated pdf files to the respective faculty member.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#===================================================================#</span>
+<span style=color:#75715e>#   Title:  Email Sender                                            #</span>
+<span style=color:#75715e>#   Author: Dhiman Roy, Dept. of ME (BUET)                          #</span>
+<span style=color:#75715e>#   Date:   April 05, 2021                                          #</span>
+<span style=color:#75715e>#   Licensed under Creative Commons                                 #</span>
+<span style=color:#75715e>#===================================================================#</span>
+
+<span style=color:#f92672>import</span> os
+os<span style=color:#f92672>.</span>chdir(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>dirname(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>abspath(__file__)))
+<span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
+<span style=color:#f92672>import</span> smtplib
+<span style=color:#f92672>from</span> email.message <span style=color:#f92672>import</span> EmailMessage
+<span style=color:#f92672>from</span> email.header <span style=color:#f92672>import</span> Header
+<span style=color:#f92672>from</span> email.utils <span style=color:#f92672>import</span> formataddr
+<span style=color:#f92672>import</span> glob
+files <span style=color:#f92672>=</span> glob<span style=color:#f92672>.</span>glob(<span style=color:#e6db74>&#34;*.pdf&#34;</span>) <span style=color:#75715e>#reads pdf files only</span>
+<span style=color:#75715e>#print(files)</span>
+
+log <span style=color:#f92672>=</span> open(<span style=color:#e6db74>&#34;log.txt&#34;</span>,<span style=color:#e6db74>&#34;w&#34;</span>)
+log<span style=color:#f92672>.</span>close()
+senderName <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Exam Coordination Team, Dept. of ME, SU&#34;</span>
+senderEmail <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;emailaddress@gmail.com&#34;</span>
+pw <span style=color:#f92672>=</span> input(<span style=color:#e6db74>&#34;Password: &#34;</span>)
+
+<span style=color:#66d9ef>with</span> open(<span style=color:#e6db74>&#34;index.html&#34;</span>) <span style=color:#66d9ef>as</span> htmlFile:
+    htmlCode <span style=color:#f92672>=</span> htmlFile<span style=color:#f92672>.</span>read()
+    htmlCode <span style=color:#f92672>=</span> htmlCode<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#34;Faculties&#34;</span>)
+    
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>sendEmail</span>(i, tea, mailList):
+    msg <span style=color:#f92672>=</span> EmailMessage()
+    msg[<span style=color:#e6db74>&#34;Subject&#34;</span>] <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Revised Routine for Final Assessment of Spring 2021&#34;</span>
+    msg[<span style=color:#e6db74>&#34;From&#34;</span>] <span style=color:#f92672>=</span> formataddr((str(Header(senderName , <span style=color:#e6db74>&#39;utf-8&#39;</span>)), senderEmail))
+    <span style=color:#66d9ef>for</span> mail <span style=color:#f92672>in</span> mailList:
+        <span style=color:#66d9ef>if</span> tea <span style=color:#f92672>in</span> mail[<span style=color:#ae81ff>0</span>]:
+            mailAdd <span style=color:#f92672>=</span> mail[<span style=color:#ae81ff>1</span>]
+            msg[<span style=color:#e6db74>&#34;To&#34;</span>] <span style=color:#f92672>=</span> mailAdd
+            <span style=color:#75715e>#print(mailAdd)</span>
+    <span style=color:#e6db74>&#39;&#39;&#39;
+</span><span style=color:#e6db74>    with open(&#34;messageBody.txt&#34;) as textFile:
+</span><span style=color:#e6db74>        text = textFile.read()
+</span><span style=color:#e6db74>        msg.set_content(text)
+</span><span style=color:#e6db74>    &#39;&#39;&#39;</span>
+    newHtmlCode <span style=color:#f92672>=</span> htmlCode[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>+</span> tea <span style=color:#f92672>+</span> htmlCode[<span style=color:#ae81ff>1</span>]
+    msg<span style=color:#f92672>.</span>add_alternative(f<span style=color:#e6db74>&#34;&#34;&#34;</span><span style=color:#ae81ff>\n\n</span><span style=color:#e6db74>{newHtmlCode}&#34;&#34;&#34;</span>, subtype <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;html&#34;</span>)
+
+    <span style=color:#66d9ef>with</span> open(tea <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;-revised.pdf&#34;</span>,<span style=color:#e6db74>&#34;rb&#34;</span>) <span style=color:#66d9ef>as</span> attachment: <span style=color:#75715e>#pdf files are needed to be ready</span>
+        fileData <span style=color:#f92672>=</span> attachment<span style=color:#f92672>.</span>read()
+        fileName <span style=color:#f92672>=</span> attachment<span style=color:#f92672>.</span>name
+        msg<span style=color:#f92672>.</span>add_attachment(fileData, maintype <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;application&#34;</span>, subtype <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;.pdf&#34;</span>, filename <span style=color:#f92672>=</span> fileName)
+    <span style=color:#e6db74>&#39;&#39;&#39;
+</span><span style=color:#e6db74>    try:
+</span><span style=color:#e6db74>        with open(tea + &#34;.pdf&#34;,&#34;rb&#34;) as attachment:
+</span><span style=color:#e6db74>            fileData = attachment.read()
+</span><span style=color:#e6db74>            fileName = attachment.name
+</span><span style=color:#e6db74>            msg.add_attachment(fileData, maintype = &#34;application&#34;, subtype = &#34;.pdf&#34;, filename = fileName)
+</span><span style=color:#e6db74>    except IOError:
+</span><span style=color:#e6db74>        print(&#34;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>.pdf is not found!!!&#34; %tea)
+</span><span style=color:#e6db74>    &#39;&#39;&#39;</span>
+    <span style=color:#66d9ef>with</span> smtplib<span style=color:#f92672>.</span>SMTP_SSL(<span style=color:#e6db74>&#34;smtp.gmail.com&#34;</span>, <span style=color:#ae81ff>465</span>) <span style=color:#66d9ef>as</span> server:
+        server<span style=color:#f92672>.</span>login(senderEmail,pw)
+        server<span style=color:#f92672>.</span>send_message(msg)
+        <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%02d</span><span style=color:#e6db74>. Successfully sent </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>.pdf to </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, tea, mailAdd))
+        log<span style=color:#f92672>.</span>writelines(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%02d</span><span style=color:#e6db74>. Successfully sent </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>.pdf to </span><span style=color:#e6db74>%s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, tea, mailAdd))
+
+<span style=color:#75715e>################## Edit this</span>
+classRoutine <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ClassRoutine.xlsx&#34;</span> <span style=color:#75715e>#get mail ids from</span>
+<span style=color:#75715e>##################</span>
+
+routine_data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(classRoutine, usecols <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Teacher&#34;</span>,<span style=color:#e6db74>&#34;Email&#34;</span>], header <span style=color:#f92672>=</span> <span style=color:#ae81ff>6</span>)
+allData <span style=color:#f92672>=</span> routine_data<span style=color:#f92672>.</span>values<span style=color:#f92672>.</span>tolist()
+
+<span style=color:#75715e>################## edit this</span>
+myFile <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;routine.xlsx&#34;</span> <span style=color:#75715e>#gets exam routine from</span>
+<span style=color:#75715e>##################</span>
+
+data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(myFile, usecols <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Teacher&#34;</span>], header <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>)
+teachers <span style=color:#f92672>=</span> data[<span style=color:#e6db74>&#34;Teacher&#34;</span>]<span style=color:#f92672>.</span>unique()<span style=color:#f92672>.</span>tolist()
+<span style=color:#75715e>#print(teachers)</span>
+listOfMails<span style=color:#f92672>=</span>[]
+teachermails <span style=color:#f92672>=</span> []
+<span style=color:#66d9ef>try</span>:
+    <span style=color:#66d9ef>for</span> teacher <span style=color:#f92672>in</span> allData:
+        <span style=color:#66d9ef>if</span> teacher[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>in</span> teachers:
+            <span style=color:#66d9ef>if</span> teacher[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>not</span> <span style=color:#f92672>in</span> teachermails:
+                teachermails<span style=color:#f92672>.</span>append(teacher[<span style=color:#ae81ff>0</span>])
+                listOfMails<span style=color:#f92672>.</span>append([teacher[<span style=color:#ae81ff>0</span>], teacher[<span style=color:#ae81ff>1</span>]])
+            
+<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
+    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;listOfMails not complete.&#34;</span>)
+
+<span style=color:#75715e>#print(teachermails)</span>
+<span style=color:#75715e>#print(allData)</span>
+<span style=color:#75715e>#print(listOfMails)</span>
+up_teachers <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Mr. X&#34;</span>, <span style=color:#e6db74>&#34;Dr. Y&#34;</span>]
+
+<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;Sending emails. Please wait.&#34;</span>)
+
+i <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>for</span> everyone <span style=color:#f92672>in</span> up_teachers:
+    log <span style=color:#f92672>=</span> open(<span style=color:#e6db74>&#34;log.txt&#34;</span>,<span style=color:#e6db74>&#34;a&#34;</span>)
+    <span style=color:#66d9ef>try</span>:
+        sendEmail(i, everyone, listOfMails)
+    <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
+        <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%02d</span><span style=color:#e6db74>. sendEmail did not run for </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, everyone))
+        log<span style=color:#f92672>.</span>writelines(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%02d</span><span style=color:#e6db74>. sendEmail did not run for </span><span style=color:#e6db74>%s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, everyone))
+    i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+    log<span style=color:#f92672>.</span>close()
+input(<span style=color:#e6db74>&#34;Hit Return to exit...&#34;</span>)
+</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Python script for calculating average drag coefficient</span></h5><div class=card><div class=card-body><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#==========================================</span>
 <span style=color:#75715e># Title:  Average drag coefficient calculator</span>
 <span style=color:#75715e># Author: Dhiman Roy, ME-14, BUET</span>
 <span style=color:#75715e># Date:   March 28, 2021</span>
@@ -282,182 +529,5 @@ files <span style=color:#f92672>=</span> [x <span style=color:#66d9ef>for</span>
 <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\t\t</span><span style=color:#e6db74>====================&#34;</span>)
 <span style=color:#75715e>#print(&#34;\n&#34;)</span>
 input(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n\t\t</span><span style=color:#e6db74>Press enter to exit...</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
-</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Python script for making PDF of exam routine and sending it to respective faculty member</span></h5><div class=card><div class=card-body><p>This script reads exam schedule from an Excel file and creates a pdf that is sent to the respective faculty member. This script helped me a lot while performing as an exam coordinator in Sonargaon University (SU).</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#===================================================================#</span>
-<span style=color:#75715e>#   Title:  PDF Maker for faculties                                 #</span>
-<span style=color:#75715e>#   Author: Dhiman Roy, Dept. of ME (BUET)                          #</span>
-<span style=color:#75715e>#   Date:   April 04, 2021                                          #</span>
-<span style=color:#75715e>#   Licensed under Creative Commons                                 #</span>
-<span style=color:#75715e>#===================================================================#</span>
-
-<span style=color:#f92672>import</span> os
-os<span style=color:#f92672>.</span>chdir(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>dirname(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>abspath(__file__)))
-<span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
-<span style=color:#f92672>from</span> fpdf <span style=color:#f92672>import</span> FPDF
-
-myFile <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;routine.xlsx&#34;</span>
-data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(myFile, usecols <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Sort By&#34;</span>,<span style=color:#e6db74>&#34;Date&#34;</span>,<span style=color:#e6db74>&#34;Day&#34;</span>,<span style=color:#e6db74>&#34;Slot&#34;</span>,<span style=color:#e6db74>&#34;ERP Section Name&#34;</span>,<span style=color:#e6db74>&#34;Course Code&#34;</span>,<span style=color:#e6db74>&#34;Course Title&#34;</span>,<span style=color:#e6db74>&#34;Teacher&#34;</span>,<span style=color:#e6db74>&#34;Designation&#34;</span>,<span style=color:#e6db74>&#34;Class Schedule&#34;</span>], header <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>)
-
-teachers <span style=color:#f92672>=</span> data[<span style=color:#e6db74>&#34;Teacher&#34;</span>]<span style=color:#f92672>.</span>unique()<span style=color:#f92672>.</span>tolist()
-<span style=color:#66d9ef>print</span>(teachers)
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>makePdf</span>(df, teacher):
-    titles <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>columns<span style=color:#f92672>.</span>tolist()
-    <span style=color:#75715e>#print(titles )</span>
-    dfData <span style=color:#f92672>=</span> df<span style=color:#f92672>.</span>values<span style=color:#f92672>.</span>tolist()
-    dfData<span style=color:#f92672>.</span>insert(<span style=color:#ae81ff>0</span>, titles)
-    <span style=color:#75715e>#print(dfData[0])</span>
-    myPdf <span style=color:#f92672>=</span> FPDF()
-    myPdf<span style=color:#f92672>.</span>add_page(<span style=color:#e6db74>&#34;L&#34;</span>)
-
-    myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, size <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>)
-
-    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Routine for Final Assessment, Spring 21&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
-    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Department of Mechanical Engineering&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
-    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Sonargaon University (SU)&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
-    myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, size <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>)   
-    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>)
-    myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, <span style=color:#e6db74>&#34;I&#34;</span>,size <span style=color:#f92672>=</span> <span style=color:#ae81ff>12</span>)
-    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Teacher: &#34;</span> <span style=color:#f92672>+</span> teacher, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;L&#34;</span>)
-    myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Designation: &#34;</span> <span style=color:#f92672>+</span> df[<span style=color:#e6db74>&#34;Designation&#34;</span>]<span style=color:#f92672>.</span>tolist()[<span style=color:#ae81ff>0</span>], ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;R&#34;</span>)
-    i<span style=color:#f92672>=</span><span style=color:#ae81ff>3</span>
-       
-    <span style=color:#66d9ef>for</span> dat <span style=color:#f92672>in</span> dfData:
-        <span style=color:#66d9ef>if</span> i <span style=color:#f92672>==</span> <span style=color:#ae81ff>3</span>:
-            myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, <span style=color:#e6db74>&#34;B&#34;</span>,size <span style=color:#f92672>=</span> <span style=color:#ae81ff>12</span>)
-        <span style=color:#66d9ef>else</span>:
-            myPdf<span style=color:#f92672>.</span>set_font(<span style=color:#e6db74>&#34;Times&#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>,size <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>)
-        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>25</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>0</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
-        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>25</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>1</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
-        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>35</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>2</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
-        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>25</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>4</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
-        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>120</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>5</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>)
-        myPdf<span style=color:#f92672>.</span>cell(<span style=color:#ae81ff>45</span>, <span style=color:#ae81ff>10</span>, txt <span style=color:#f92672>=</span> dat[<span style=color:#ae81ff>3</span>], border <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, align <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;C&#34;</span>, ln <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>)
-        i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-    myPdf<span style=color:#f92672>.</span>output(teacher <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.pdf&#34;</span>)
-    <span style=color:#66d9ef>print</span>(teacher <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;.pdf is created.&#34;</span>)
-i <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-<span style=color:#66d9ef>for</span> tea <span style=color:#f92672>in</span> teachers:
-    dmnData <span style=color:#f92672>=</span> data<span style=color:#f92672>.</span>loc[data<span style=color:#f92672>.</span>Teacher <span style=color:#f92672>==</span> tea]<span style=color:#f92672>.</span>sort_values(by <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Sort By&#34;</span>)     <span style=color:#75715e>#filters data using teachers list</span>
-
-    <span style=color:#66d9ef>del</span> dmnData[<span style=color:#e6db74>&#34;Sort By&#34;</span>]
-
-    dmnData[<span style=color:#e6db74>&#34;Date&#34;</span>] <span style=color:#f92672>=</span> dmnData[<span style=color:#e6db74>&#34;Date&#34;</span>]<span style=color:#f92672>.</span>dt<span style=color:#f92672>.</span>strftime(<span style=color:#e6db74>&#34;%B </span><span style=color:#e6db74>%d</span><span style=color:#e6db74>, %Y&#34;</span>)                      <span style=color:#75715e>#Converts date to string</span>
-
-    <span style=color:#75715e>#print(dmnData)</span>
-
-    makePdf(dmnData, tea)
-    i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-
-<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>*******</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>Total </span><span style=color:#e6db74>%d</span><span style=color:#e6db74> files are saved.</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>********</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>))
-
-input(<span style=color:#e6db74>&#34;Hit Enter to exit...&#34;</span>)
-</code></pre></div><p><br>The following script can send the generated pdf files to the respective faculty member.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#===================================================================#</span>
-<span style=color:#75715e>#   Title:  Email Sender                                            #</span>
-<span style=color:#75715e>#   Author: Dhiman Roy, Dept. of ME (BUET)                          #</span>
-<span style=color:#75715e>#   Date:   April 05, 2021                                          #</span>
-<span style=color:#75715e>#   Licensed under Creative Commons                                 #</span>
-<span style=color:#75715e>#===================================================================#</span>
-
-<span style=color:#f92672>import</span> os
-os<span style=color:#f92672>.</span>chdir(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>dirname(os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>abspath(__file__)))
-<span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
-<span style=color:#f92672>import</span> smtplib
-<span style=color:#f92672>from</span> email.message <span style=color:#f92672>import</span> EmailMessage
-<span style=color:#f92672>from</span> email.header <span style=color:#f92672>import</span> Header
-<span style=color:#f92672>from</span> email.utils <span style=color:#f92672>import</span> formataddr
-<span style=color:#f92672>import</span> glob
-files <span style=color:#f92672>=</span> glob<span style=color:#f92672>.</span>glob(<span style=color:#e6db74>&#34;*.pdf&#34;</span>) <span style=color:#75715e>#reads pdf files only</span>
-<span style=color:#75715e>#print(files)</span>
-
-log <span style=color:#f92672>=</span> open(<span style=color:#e6db74>&#34;log.txt&#34;</span>,<span style=color:#e6db74>&#34;w&#34;</span>)
-log<span style=color:#f92672>.</span>close()
-senderName <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Exam Coordination Team, Dept. of ME, SU&#34;</span>
-senderEmail <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;emailaddress@gmail.com&#34;</span>
-pw <span style=color:#f92672>=</span> input(<span style=color:#e6db74>&#34;Password: &#34;</span>)
-
-<span style=color:#66d9ef>with</span> open(<span style=color:#e6db74>&#34;index.html&#34;</span>) <span style=color:#66d9ef>as</span> htmlFile:
-    htmlCode <span style=color:#f92672>=</span> htmlFile<span style=color:#f92672>.</span>read()
-    htmlCode <span style=color:#f92672>=</span> htmlCode<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#34;Faculties&#34;</span>)
-    
-
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>sendEmail</span>(i, tea, mailList):
-    msg <span style=color:#f92672>=</span> EmailMessage()
-    msg[<span style=color:#e6db74>&#34;Subject&#34;</span>] <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Revised Routine for Final Assessment of Spring 2021&#34;</span>
-    msg[<span style=color:#e6db74>&#34;From&#34;</span>] <span style=color:#f92672>=</span> formataddr((str(Header(senderName , <span style=color:#e6db74>&#39;utf-8&#39;</span>)), senderEmail))
-    <span style=color:#66d9ef>for</span> mail <span style=color:#f92672>in</span> mailList:
-        <span style=color:#66d9ef>if</span> tea <span style=color:#f92672>in</span> mail[<span style=color:#ae81ff>0</span>]:
-            mailAdd <span style=color:#f92672>=</span> mail[<span style=color:#ae81ff>1</span>]
-            msg[<span style=color:#e6db74>&#34;To&#34;</span>] <span style=color:#f92672>=</span> mailAdd
-            <span style=color:#75715e>#print(mailAdd)</span>
-    <span style=color:#e6db74>&#39;&#39;&#39;
-</span><span style=color:#e6db74>    with open(&#34;messageBody.txt&#34;) as textFile:
-</span><span style=color:#e6db74>        text = textFile.read()
-</span><span style=color:#e6db74>        msg.set_content(text)
-</span><span style=color:#e6db74>    &#39;&#39;&#39;</span>
-    newHtmlCode <span style=color:#f92672>=</span> htmlCode[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>+</span> tea <span style=color:#f92672>+</span> htmlCode[<span style=color:#ae81ff>1</span>]
-    msg<span style=color:#f92672>.</span>add_alternative(f<span style=color:#e6db74>&#34;&#34;&#34;</span><span style=color:#ae81ff>\n\n</span><span style=color:#e6db74>{newHtmlCode}&#34;&#34;&#34;</span>, subtype <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;html&#34;</span>)
-
-    <span style=color:#66d9ef>with</span> open(tea <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;-revised.pdf&#34;</span>,<span style=color:#e6db74>&#34;rb&#34;</span>) <span style=color:#66d9ef>as</span> attachment: <span style=color:#75715e>#pdf files are needed to be ready</span>
-        fileData <span style=color:#f92672>=</span> attachment<span style=color:#f92672>.</span>read()
-        fileName <span style=color:#f92672>=</span> attachment<span style=color:#f92672>.</span>name
-        msg<span style=color:#f92672>.</span>add_attachment(fileData, maintype <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;application&#34;</span>, subtype <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;.pdf&#34;</span>, filename <span style=color:#f92672>=</span> fileName)
-    <span style=color:#e6db74>&#39;&#39;&#39;
-</span><span style=color:#e6db74>    try:
-</span><span style=color:#e6db74>        with open(tea + &#34;.pdf&#34;,&#34;rb&#34;) as attachment:
-</span><span style=color:#e6db74>            fileData = attachment.read()
-</span><span style=color:#e6db74>            fileName = attachment.name
-</span><span style=color:#e6db74>            msg.add_attachment(fileData, maintype = &#34;application&#34;, subtype = &#34;.pdf&#34;, filename = fileName)
-</span><span style=color:#e6db74>    except IOError:
-</span><span style=color:#e6db74>        print(&#34;</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>.pdf is not found!!!&#34; %tea)
-</span><span style=color:#e6db74>    &#39;&#39;&#39;</span>
-    <span style=color:#66d9ef>with</span> smtplib<span style=color:#f92672>.</span>SMTP_SSL(<span style=color:#e6db74>&#34;smtp.gmail.com&#34;</span>, <span style=color:#ae81ff>465</span>) <span style=color:#66d9ef>as</span> server:
-        server<span style=color:#f92672>.</span>login(senderEmail,pw)
-        server<span style=color:#f92672>.</span>send_message(msg)
-        <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%02d</span><span style=color:#e6db74>. Successfully sent </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>.pdf to </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, tea, mailAdd))
-        log<span style=color:#f92672>.</span>writelines(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%02d</span><span style=color:#e6db74>. Successfully sent </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>.pdf to </span><span style=color:#e6db74>%s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, tea, mailAdd))
-
-<span style=color:#75715e>################## Edit this</span>
-classRoutine <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ClassRoutine.xlsx&#34;</span> <span style=color:#75715e>#get mail ids from</span>
-<span style=color:#75715e>##################</span>
-
-routine_data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(classRoutine, usecols <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Teacher&#34;</span>,<span style=color:#e6db74>&#34;Email&#34;</span>], header <span style=color:#f92672>=</span> <span style=color:#ae81ff>6</span>)
-allData <span style=color:#f92672>=</span> routine_data<span style=color:#f92672>.</span>values<span style=color:#f92672>.</span>tolist()
-
-<span style=color:#75715e>################## edit this</span>
-myFile <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;routine.xlsx&#34;</span> <span style=color:#75715e>#gets exam routine from</span>
-<span style=color:#75715e>##################</span>
-
-data <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(myFile, usecols <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Teacher&#34;</span>], header <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>)
-teachers <span style=color:#f92672>=</span> data[<span style=color:#e6db74>&#34;Teacher&#34;</span>]<span style=color:#f92672>.</span>unique()<span style=color:#f92672>.</span>tolist()
-<span style=color:#75715e>#print(teachers)</span>
-listOfMails<span style=color:#f92672>=</span>[]
-teachermails <span style=color:#f92672>=</span> []
-<span style=color:#66d9ef>try</span>:
-    <span style=color:#66d9ef>for</span> teacher <span style=color:#f92672>in</span> allData:
-        <span style=color:#66d9ef>if</span> teacher[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>in</span> teachers:
-            <span style=color:#66d9ef>if</span> teacher[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>not</span> <span style=color:#f92672>in</span> teachermails:
-                teachermails<span style=color:#f92672>.</span>append(teacher[<span style=color:#ae81ff>0</span>])
-                listOfMails<span style=color:#f92672>.</span>append([teacher[<span style=color:#ae81ff>0</span>], teacher[<span style=color:#ae81ff>1</span>]])
-            
-<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
-    <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;listOfMails not complete.&#34;</span>)
-
-<span style=color:#75715e>#print(teachermails)</span>
-<span style=color:#75715e>#print(allData)</span>
-<span style=color:#75715e>#print(listOfMails)</span>
-up_teachers <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Mr. X&#34;</span>, <span style=color:#e6db74>&#34;Dr. Y&#34;</span>]
-
-<span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;Sending emails. Please wait.&#34;</span>)
-
-i <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-<span style=color:#66d9ef>for</span> everyone <span style=color:#f92672>in</span> up_teachers:
-    log <span style=color:#f92672>=</span> open(<span style=color:#e6db74>&#34;log.txt&#34;</span>,<span style=color:#e6db74>&#34;a&#34;</span>)
-    <span style=color:#66d9ef>try</span>:
-        sendEmail(i, everyone, listOfMails)
-    <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
-        <span style=color:#66d9ef>print</span>(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%02d</span><span style=color:#e6db74>. sendEmail did not run for </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, everyone))
-        log<span style=color:#f92672>.</span>writelines(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%02d</span><span style=color:#e6db74>. sendEmail did not run for </span><span style=color:#e6db74>%s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(i, everyone))
-    i <span style=color:#f92672>=</span> i <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-    log<span style=color:#f92672>.</span>close()
-input(<span style=color:#e6db74>&#34;Hit Return to exit...&#34;</span>)
 </code></pre></div></div></div></div></div></div><div class=paginator></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=/#about-me>About Me</a></li><li class=nav-item><a class=smooth-scroll href=/#education>Education</a></li><li class=nav-item><a class=smooth-scroll href=/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=/#research>Research</a></li><li class=nav-item><a class=smooth-scroll href=/#publications>Publications</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>dhimanroy117@gmail.com</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4></div><div class="col-md-4 text-center"><a class=text-white>© 2021 || Dhiman Roy</a><p style=font-size:11px class=text-warning>Updated on:
 <time>November 26, 2021</time></p></div><div class="col-md-4 text-right"></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/imagesloaded.pkgd.min.js></script><script src=/js/note.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
