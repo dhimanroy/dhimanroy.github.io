@@ -10,7 +10,7 @@ menu:
     weight: 21
 ---
 {{< note title="Batch script for running a phython script in each subdirectory" >}}
-This script runs a python script in each subdirectory of a parent folder. This code is developed to batch process simulation results without any commercial software. A tiny step towards building open source tools.
+This script runs a <a href='/codes/python-scripts/for-extracting-data'>python script</a> in each subdirectory of a parent folder. This code is developed to batch process simulation results without any commercial software. A tiny step towards building open source tools.
 <br/>
 
 ```batch

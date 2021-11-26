@@ -8,8 +8,8 @@ menu:
     parent: codes-bashScripts
     weight: 11
 ---
-{{< note title="Bash script for running a phython script in each subdirectory" >}}
-This shell script which is developed to batch process simulation results, runs a python script in each subdirectory of a parent folder.
+{{< note title="Bash script for running a python script in each subdirectory" >}}
+This shell script which is developed to batch process simulation results, runs a <a href='/codes/python-scripts/for-extracting-data'>python script</a> in each subdirectory of a parent folder.
 <br/>
 
 ```bash
