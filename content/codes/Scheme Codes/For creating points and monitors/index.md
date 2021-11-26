@@ -1,13 +1,13 @@
 ---
 title: Scheme code for creating points and monitors
 date: 2021-02-07
-weight: 1
+weight: 31
 menu:
   codes:
     name: For creating points and monitors
     identifier: codes-scheme-createPointsAndMonitors
     parent: codes-scheme
-    weight: 1
+    weight: 31
 ---
 {{< note title="Scheme code for creating points and monitors" >}}
 ```scheme

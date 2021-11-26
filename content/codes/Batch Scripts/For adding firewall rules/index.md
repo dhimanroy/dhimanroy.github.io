@@ -7,7 +7,7 @@ menu:
     name: For adding firewall rules
     identifier: codes-batchScripts-addFirewall
     parent: codes-batchScripts
-    weight: 1
+    weight: 21
 ---
 
 

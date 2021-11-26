@@ -6,7 +6,7 @@ menu:
     name: Gauss Seidel method
     identifier: gauss-seidel
     parent: solving-SLE
-    weight: 4
+    weight: 54
 ---
 {{< note title="Script for Gauss Seidel method" >}}
 This matlab script can solve a system of linear equations by Gauss Seidel method, an iterative method. Co-efficeint matrix, contant vector, initial guesses and tolerence are be prompted for user input. 

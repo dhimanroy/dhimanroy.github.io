@@ -6,7 +6,7 @@ menu:
     name: For extacting xy plot data
     identifier: codes-scheme-extractPlotData
     parent: codes-scheme
-    weight: 2
+    weight: 32
 ---
 {{< note title="Scheme code for extacting xy plot data" >}}
 ```scheme

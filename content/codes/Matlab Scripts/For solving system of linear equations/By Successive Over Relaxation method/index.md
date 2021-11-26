@@ -6,7 +6,7 @@ menu:
     name: Successive Over Relaxation method
     identifier: sor
     parent: solving-SLE
-    weight: 5
+    weight: 55
 ---
 {{< note title="Script for SOR method" >}}
 Solves a system of linear equations by successive over relaxation, prompts for co-efficient matrix, contant vector, initial guesses and relaxation factor.

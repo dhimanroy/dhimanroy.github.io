@@ -6,7 +6,7 @@ menu:
     name: Gauss Elimination method
     identifier: gauss-elimination
     parent: solving-SLE
-    weight: 1
+    weight: 51
 ---
 {{< note title="Script for Gauss Elimination method" >}}
 

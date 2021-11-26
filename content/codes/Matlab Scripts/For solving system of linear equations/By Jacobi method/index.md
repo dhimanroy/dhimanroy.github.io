@@ -6,7 +6,7 @@ menu:
     name: Jacobi method
     identifier: jacobi
     parent: solving-SLE
-    weight: 3
+    weight: 53
 ---
 {{< note title="Script for Jacobi method" >}}
 Another iterative method for solving a system of linear equations.

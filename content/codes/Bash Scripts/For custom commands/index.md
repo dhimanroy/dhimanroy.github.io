@@ -6,7 +6,7 @@ menu:
     name: For custom commands
     identifier: codes-bashScripts-customCodes
     parent: codes-bashScripts
-    weight: 1
+    weight: 11
 ---
 
 

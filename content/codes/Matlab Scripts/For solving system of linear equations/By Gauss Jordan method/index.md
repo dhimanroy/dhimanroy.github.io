@@ -6,7 +6,7 @@ menu:
     name: Gauss Jordan method
     identifier: gauss-jordan
     parent: solving-SLE
-    weight: 2
+    weight: 52
 ---
 {{< note title="Script for Gauss Jordan method" >}}
 
