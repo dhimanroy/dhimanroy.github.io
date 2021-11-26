@@ -12,7 +12,7 @@ section:
   # hideTitle: true
 
 degrees:
-#- name: Ph.D in Quantum Cryptography
+# - name: Ph.D in Quantum Cryptography
 #  icon: fa-microscope
 #  timeframe: 2016-2020
 #  institution:
@@ -56,23 +56,21 @@ degrees:
 #       achieved: 
 #       outOf: 4
     
-  publications: #(optional)
-    showPublications: false   #if true, will show this div
-    pubList:
-    - title: publication 1
-      url: ""
-    - title: publication 2
-      url: ""
-  #extracurricularActivities: #(optional)
-  extracurricular:
-    show: false
-    activities:
-    - Football
-    - Film Making
-    - Origami
-    - Cultural
-
-
+#   publications: #(optional)
+#     showPublications: false   #if true, will show this div
+#     pubList:
+#     - title: publication 1
+#       url: ""
+#     - title: publication 2
+#       url: ""
+#   #extracurricularActivities: #(optional)
+#   extracurricular:
+#     show: false
+#     activities:
+#     - Football
+#     - Film Making
+#     - Origami
+#     - Cultural
 
 - name: B.Sc. in Mechanical Engineering
   icon: fa-graduation-cap
