@@ -25,7 +25,8 @@ import pandas as pd
 from fpdf import FPDF
 
 myFile = "routine.xlsx"
-data = pd.read_excel(myFile, usecols = ["Sort By","Date","Day","Slot","ERP Section Name","Course Code","Course Title","Teacher","Designation","Class Schedule"], header = 2)
+data = pd.read_excel(myFile, usecols = ["Sort By","Date","Day","Slot","ERP Section Name",
+"Course Code","Course Title","Teacher","Designation","Class Schedule"], header = 2)
 
 teachers = data["Teacher"].unique().tolist()
 print(teachers)
