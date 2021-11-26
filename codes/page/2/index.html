@@ -4,72 +4,7 @@
 Dhiman Roy</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
 <span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/site/main-logo_hu98b1e25c44cc76379c733a63e18e4740_51846_42x0_resize_box_2.png class=d-none id=main-logo alt=Logo>
-<img src=/images/site/inverted-logo_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/codes data-filter=all>Codes</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/codes/bash-scripts/>Bash Scripts</a><ul><li><a href=/codes/bash-scripts/for-running-a-python-script-in-each-subdirectory/ title="For running a python script in each subdirectory">For running a python script in each subdirectory</a></li><li><a href=/codes/bash-scripts/for-custom-commands/ title="For custom commands">For custom commands</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/batch-scripts/>Batch Scripts</a><ul><li><a href=/codes/batch-scripts/for-running-a-phython-script-in-each-subdirectory/ title="For running a phython script in each subdirectory">For running a phython script in each subdirectory</a></li><li><a href=/codes/batch-scripts/for-adding-firewall-rules/ title="For adding firewall rules">For adding firewall rules</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/scheme-codes/>Scheme Codes</a><ul><li><a href=/codes/scheme-codes/for-creating-points-and-monitors/ title="For creating points and monitors">For creating points and monitors</a></li><li><a href=/codes/scheme-codes/for-extacting-xy-plot-data/ title="For extacting xy plot data">For extacting xy plot data</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/python-scripts/>Python Scripts</a><ul><li><a href=/codes/python-scripts/for-calculating-average-drag/ title="For calculating average drag coefficient">For calculating average drag coefficient</a></li><li><a href=/codes/python-scripts/for-extracting-data/ title="For extracting data from ascii files">For extracting data from ascii files</a></li><li><a href=/codes/python-scripts/for-creating-java-script/ title="For creating Java Script that populates a webform">For creating Java Script that populates a webform</a></li><li><a href=/codes/python-scripts/for-making-pdf-and-sending-it-to-the-faculty-member/ title="For making PDF of exam routine and sending mail">For making PDF of exam routine and sending mail</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/matlab-scripts/>Matlab Scripts</a><ul><li><i class="fas fa-plus-circle"></i><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/>For solving system of linear equations</a><ul><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-elimination-method/ title="Gauss Elimination method">Gauss Elimination method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-jordan-method/ title="Gauss Jordan method">Gauss Jordan method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-jacobi-method/ title="Jacobi method">Jacobi method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-seidel-method/ title="Gauss Seidel method">Gauss Seidel method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-successive-over-relaxation-method/ title="Successive Over Relaxation method">Successive Over Relaxation method</a></li></ul></li></ul></li><li><a href=/codes/dpm-particle-history-data/ title="DPM Particle History">DPM Particle History</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Script for Gauss Elimination method</span></h5><div class=card><div class=card-body><p>This matlab script can solve a system of linear equations by Gauss elimination method with partial pivoting.
-Fun fact is, this script can show the calculation steps. So, A lot less effort is needed while
-preparing assignments.</br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>
-<span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
-<span style=color:#75715e>%   Title:  Gauss Elimination with partial pivoting                 %</span>
-<span style=color:#75715e>%   Author: Dhiman Roy, Dept. of ME (BUET)                          %</span>
-<span style=color:#75715e>%   Date:   August 23, 2021                                         %</span>
-<span style=color:#75715e>%   Licensed under Creative Commons                                 %</span>
-<span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
-
-clear; 
-clc;
-<span style=color:#66d9ef>global</span> showSteps;
-showSteps = true; <span style=color:#75715e>%can be true or false. true shows calculation steps</span>
-
-A = input(<span style=color:#e6db74>&#39;Please Enter the Co-efficient Matrix, A:\n&#39;</span> ); 
-b = input(<span style=color:#e6db74>&#39;Please Enter the Constants(Must be a column vector, b:\n&#39;</span>);
-
-solByGEPP = gaussElimPartPiv(A, b)
-
-<span style=color:#66d9ef>function</span> [x] = <span style=color:#a6e22e>gaussElimPartPiv</span>(A, b)
-    <span style=color:#66d9ef>global</span> showSteps;
-    [m, n] = size(A);
-    <span style=color:#66d9ef>if</span> m<span style=color:#f92672>~=</span>n
-        error(&#34;<span style=color:#e6db74>&#39;A&#39;</span> must be a square matrix.&#34;);
-    <span style=color:#66d9ef>else</span>
-        aug = [A b];
-        <span style=color:#66d9ef>if</span> showSteps <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>
-            fprintf(&#34;Gauss elimination with partial pivoting<span style=color:#f92672>.\</span>nAugmented Matrix:<span style=color:#f92672>\</span>n&#34;);
-            disp(aug);
-            fprintf(&#34;<span style=color:#f92672>\</span>n&#34;);
-        <span style=color:#66d9ef>end</span>
-        
-        <span style=color:#66d9ef>for</span> k = <span style=color:#ae81ff>1</span>: n<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
-            <span style=color:#75715e>%partial pivoting</span>
-            <span style=color:#66d9ef>for</span> p = k<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n
-                <span style=color:#66d9ef>if</span> abs(A(k,k) <span style=color:#f92672>&lt;</span> A(p,k))
-                    aug([k p],:) = aug([p k],:);
-                <span style=color:#66d9ef>end</span>
-            <span style=color:#66d9ef>end</span>
-            <span style=color:#75715e>%forward elimination</span>
-            <span style=color:#66d9ef>for</span> i = k<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>: n
-                <span style=color:#66d9ef>if</span> showSteps <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>
-                    fprintf(&#34;Row<span style=color:#75715e>%d = Row%d - (%0.4f)/(%0.4f) * Row%d\n&#34;, i, i, aug(i,k), aug(k,k), k);</span>
-                <span style=color:#66d9ef>end</span>
-                factor = aug(i,k)<span style=color:#f92672>/</span>aug(k,k);
-                aug(i,k:n<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>) =  aug(i,k:n<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>)<span style=color:#f92672>-</span>factor<span style=color:#f92672>*</span>aug(k,k:n<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>);
-            <span style=color:#66d9ef>end</span>
-            
-            <span style=color:#75715e>%display augmented matrix after each step</span>
-            <span style=color:#66d9ef>if</span> showSteps <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>
-                fprintf(&#34;<span style=color:#f92672>\</span>n&#34;);
-                disp(aug)
-                fprintf(&#34;<span style=color:#f92672>\</span>n&#34;);
-            <span style=color:#66d9ef>end</span>
-        <span style=color:#66d9ef>end</span>
-        <span style=color:#75715e>%back substitution</span>
-        x = zeros(n,<span style=color:#ae81ff>1</span>);
-        x(n) = aug(n,n<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>)<span style=color:#f92672>/</span>aug(n,n);
-        <span style=color:#66d9ef>for</span> i = n<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>:<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>:<span style=color:#ae81ff>1</span>
-           x(i) = (aug(i,n<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>)<span style=color:#f92672>-</span>aug(i,i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n)<span style=color:#f92672>*</span>x(i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n))<span style=color:#f92672>/</span>aug(i,i);
-        <span style=color:#66d9ef>end</span>
-    <span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-
-</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Script for Gauss Jordan method</span></h5><div class=card><div class=card-body><p>This matlab script can solve a system of linear equations by Gauss Jordan method with partial pivoting. Co-efficeint matrix and contant vector are be prompted for user input.
+<img src=/images/site/inverted-logo_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/codes data-filter=all>Codes</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/codes/bash-scripts/>Bash Scripts</a><ul><li><a href=/codes/bash-scripts/for-running-a-python-script-in-each-subdirectory/ title="For running a python script in each subdirectory">For running a python script in each subdirectory</a></li><li><a href=/codes/bash-scripts/for-custom-commands/ title="For custom commands">For custom commands</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/batch-scripts/>Batch Scripts</a><ul><li><a href=/codes/batch-scripts/for-running-a-phython-script-in-each-subdirectory/ title="For running a phython script in each subdirectory">For running a phython script in each subdirectory</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/scheme-codes/>Scheme Codes</a><ul><li><a href=/codes/scheme-codes/for-creating-points-and-monitors/ title="For creating points and monitors">For creating points and monitors</a></li><li><a href=/codes/scheme-codes/for-extacting-xy-plot-data/ title="For extacting xy plot data">For extacting xy plot data</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/python-scripts/>Python Scripts</a><ul><li><a href=/codes/python-scripts/for-calculating-average-drag/ title="For calculating average drag coefficient">For calculating average drag coefficient</a></li><li><a href=/codes/python-scripts/for-extracting-data/ title="For extracting data from ascii files">For extracting data from ascii files</a></li><li><a href=/codes/python-scripts/for-creating-java-script/ title="For creating Java Script that populates a webform">For creating Java Script that populates a webform</a></li><li><a href=/codes/python-scripts/for-making-pdf-and-sending-it-to-the-faculty-member/ title="For making PDF of exam routine and sending mail">For making PDF of exam routine and sending mail</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/matlab-scripts/>Matlab Scripts</a><ul><li><i class="fas fa-plus-circle"></i><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/>For solving system of linear equations</a><ul><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-elimination-method/ title="Gauss Elimination method">Gauss Elimination method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-jordan-method/ title="Gauss Jordan method">Gauss Jordan method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-jacobi-method/ title="Jacobi method">Jacobi method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-seidel-method/ title="Gauss Seidel method">Gauss Seidel method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-successive-over-relaxation-method/ title="Successive Over Relaxation method">Successive Over Relaxation method</a></li></ul></li></ul></li><li><a href=/codes/dpm-particle-history-data/ title="DPM Particle History">DPM Particle History</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Script for Gauss Jordan method</span></h5><div class=card><div class=card-body><p>This matlab script can solve a system of linear equations by Gauss Jordan method with partial pivoting. Co-efficeint matrix and contant vector are be prompted for user input.
 Fun fact is, this script can show the calculation steps.</br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>
 <span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
 <span style=color:#75715e>%   Title:  Gauss Jordan with partial pivoting                      %</span>
