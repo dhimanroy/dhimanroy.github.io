@@ -1,12 +1,12 @@
 ---
 title: Bash codes for custom commands
-weight: 1
+weight: 12
 menu:
   codes:
     name: For custom commands
     identifier: codes-bashScripts-customCodes
     parent: codes-bashScripts
-    weight: 11
+    weight: 12
 ---
 
 
