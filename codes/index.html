@@ -52,8 +52,7 @@ removebackslash<span style=color:#f92672>(){</span>
         str<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>@//$bs/<span style=color:#e6db74>}</span>
         echo <span style=color:#e6db74>&#34;</span>$str<span style=color:#e6db74>&#34;</span>
         <span style=color:#f92672>}</span>
-</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Bash script for running a phython script in each subdirectory</span></h5><div class=card><div class=card-body><p>This shell script which is developed to batch process simulation results runs a python script in each subdirectory of a parent folder.<br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
-storeDir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;processedData&#34;</span>
+</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Bash script for running a phython script in each subdirectory</span></h5><div class=card><div class=card-body><p>This shell script which is developed to batch process simulation results, runs a python script in each subdirectory of a parent folder.<br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>storeDir<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;processedData&#34;</span>
 pyFile<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;dataExtract.py&#34;</span>
 
 <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -d <span style=color:#e6db74>&#34;</span>$storeDir<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
@@ -74,8 +73,6 @@ mv A*.dat <span style=color:#e6db74>&#34;</span>$storeDir<span style=color:#e6db
 
 echo <span style=color:#e6db74>&#34;Files are moved to </span>$storeDir<span style=color:#e6db74>.&#34;</span>
 echo <span style=color:#e6db74>&#34;Done...&#34;</span>
-
-
 </code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Batch script for running a phython script in each subdirectory</span></h5><div class=card><div class=card-body><p>This script runs a python script in each subdirectory of a parent folder. This code is developed to batch process simulation results without any commercial software. A tiny step towards building open source tools.<br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-batch data-lang=batch>
 @<span style=color:#66d9ef>echo</span> off
 <span style=color:#66d9ef>set</span> back=%cd%
