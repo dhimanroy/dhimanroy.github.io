@@ -15,22 +15,22 @@ This script runs a <a href='/codes/python-scripts/for-extracting-data'>python sc
 
 ```batch
 
-@echo off
-set back=%cd%
-for /d %%i in (%~dp0\*) do (
-xcopy "dataExtract.py" "%%i"
-cd "%%i"
-echo current directory:
-cd
-python3 dataExtract.py
-)
-cd %back%
-for /d %%i in (%~dp0\*) do (
-cd "%%i"
-del dataExtract.py
-)
-cd %back%
-pause
-
+    @echo off
+    set back=%cd%
+    for /d %%i in (%~dp0\*) do (
+    xcopy "dataExtract.py" "%%i"
+    cd "%%i"
+    echo current directory:
+    cd
+    python3 dataExtract.py
+    )
+    cd %back%
+    for /d %%i in (%~dp0\*) do (
+    cd "%%i"
+    del dataExtract.py
+    )
+    cd %back%
+    pause
+    
 ```
 {{< /note >}}
