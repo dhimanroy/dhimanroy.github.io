@@ -156,7 +156,7 @@ solByGJPP = gaussJordanPartPiv(A, b)
     x = aug(:,n<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>);
 <span style=color:#66d9ef>end</span>
 
-</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Script for Gauss Seidel method</span></h5><div class=card><div class=card-body><p>This matlab script can solve a system of linear equations by Gauss Seidel method, an iterative method. Co-efficeint matrix, contant vector and tolerence are be prompted for user input.<br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>
+</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Script for Gauss Seidel method</span></h5><div class=card><div class=card-body><p>This matlab script can solve a system of linear equations by Gauss Seidel method, an iterative method. Co-efficeint matrix, contant vector, initial guesses and tolerence are be prompted for user input.<br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>
 <span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
 <span style=color:#75715e>%   Title:  Gauss Seidel method                                     %</span>
 <span style=color:#75715e>%   Author: Dhiman Roy, Dept. of ME (BUET)                          %</span>
@@ -222,115 +222,138 @@ solByGaussSiedel = gaussSeidel(A, b)
     <span style=color:#66d9ef>end</span>
 <span style=color:#66d9ef>end</span>
 
-</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Script for Jacobi method</span></h5><div class=card><div class=card-body><br>```matlab<p>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Title: Jacobi Method %
-% Author: Dhiman Roy, Dept. of ME (BUET) %
-% Date: August 23, 2021 %
-% Licensed under Creative Commons %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</p><p>clear;
+</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Script for Jacobi method</span></h5><div class=card><div class=card-body><p>Another iterative method for solving a system of linear equations.<br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>
+<span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span style=color:#75715e>%   Title:  Jacobi method                                           %</span>
+<span style=color:#75715e>%   Author: Dhiman Roy, Dept. of ME (BUET)                          %</span>
+<span style=color:#75715e>%   Date:   August 23, 2021                                         %</span>
+<span style=color:#75715e>%   Licensed under Creative Commons                                 %</span>
+<span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+clear; 
 clc;
-global showSteps;
-showSteps = false; %true shows calculation steps</p><p>A = input(&lsquo;Please Enter the Co-efficient Matrix, A:\n&rsquo; );
-b = input(&lsquo;Please Enter the Constants(Must be a column vector, b:\n&rsquo;);</p><p>solByJacobi = jacobi(A, b)</p><p>function [x] = jacobi(A, b)
-global showSteps;
-xIni = input(&ldquo;Enter initial guesses (Must be a column vector:\n&rdquo;);
-eLimit = input(&ldquo;Enter tolerance:\n&rdquo;);
-[m,n] = size(A);
-for k = 1: n-1
-for p = k+1:n
-if abs(A(k,k) &lt; A(p,k))
-b([k p]) = b([p k]);
-A([k p],:) = A([p k],:);
-end
-end
-end
-check = ones(n,1);
-for i = 1:n
-if 2*abs(A(i,i)) &lt; sum(abs(A(i,:)))
-check(i) = 0;
-end
-end
-if all(check) ~= 1
-error(&ldquo;Partial pivoting does not make the coefficient matrix a diagonally dominant matrix.")
-else
-disp(&ldquo;Partial pivoting makes the coefficient matrix a diagonally dominant matrix.")
-end</p><pre><code>xOld = xIni;
-xNew = zeros(n,1);
-for k = 1:100
-    err = 0;
-    for i = 1:n
-        xNew(i) = b(i)/A(i,i)-A(i,[1:i-1,i+1:n])*(xOld([1:i-1,i+1:n])/A(i,i));
-        err = err + abs((xNew(i)-xOld(i))/xNew(i));
-    end
-    if showSteps == 1
-        fprintf(&quot;Iteration %d\n&quot;,k);
-        disp(xNew);
-        abs((xNew-xOld)/xNew);
-    end
+<span style=color:#66d9ef>global</span> showSteps;
+showSteps = false; <span style=color:#75715e>%true shows calculation steps</span>
+
+A = input(<span style=color:#e6db74>&#39;Please Enter the Co-efficient Matrix, A:\n&#39;</span> ); 
+b = input(<span style=color:#e6db74>&#39;Please Enter the Constants(Must be a column vector, b:\n&#39;</span>); 
+
+solByJacobi = jacobi(A, b)
+
+<span style=color:#66d9ef>function</span> [x] = <span style=color:#a6e22e>jacobi</span>(A, b)
+    <span style=color:#66d9ef>global</span> showSteps;
+    xIni = input(&#34;Enter initial guesses (Must be a column vector:<span style=color:#f92672>\</span>n&#34;); 
+    eLimit = input(&#34;Enter tolerance:<span style=color:#f92672>\</span>n&#34;);
+    [m,n] = size(A);
+    <span style=color:#66d9ef>for</span> k = <span style=color:#ae81ff>1</span>: n<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
+        <span style=color:#66d9ef>for</span> p = k<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n
+            <span style=color:#66d9ef>if</span> abs(A(k,k) <span style=color:#f92672>&lt;</span> A(p,k))
+                b([k p]) = b([p k]);
+                A([k p],:) = A([p k],:);
+            <span style=color:#66d9ef>end</span>
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+    check = ones(n,<span style=color:#ae81ff>1</span>);
+    <span style=color:#66d9ef>for</span> i = <span style=color:#ae81ff>1</span>:n
+        <span style=color:#66d9ef>if</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>*</span>abs(A(i,i)) <span style=color:#f92672>&lt;</span> sum(abs(A(i,:))) 
+            check(i) = <span style=color:#ae81ff>0</span>;
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>if</span> all(check) <span style=color:#f92672>~=</span> <span style=color:#ae81ff>1</span>
+        error(&#34;Partial pivoting does not make the coefficient matrix a diagonally dominant matrix.&#34;)
+    <span style=color:#66d9ef>else</span>
+        disp(&#34;Partial pivoting makes the coefficient matrix a diagonally dominant matrix.&#34;)
+    <span style=color:#66d9ef>end</span>
     
-    
-    if err &lt; eLimit
-        break;
-    end
-    xOld = xNew;
-end
-x = xNew;
-</code></pre><p>end</p><pre><code></code></pre></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Script for SOR method</span></h5><div class=card><div class=card-body><br>```matlab
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Title: Jacobi Method %
-% Author: Dhiman Roy, Dept. of ME (BUET) %
-% Date: August 23, 2021 %
-% Licensed under Creative Commons %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<p>clear;
+    xOld = xIni;
+    xNew = zeros(n,<span style=color:#ae81ff>1</span>);
+    <span style=color:#66d9ef>for</span> k = <span style=color:#ae81ff>1</span>:<span style=color:#ae81ff>100</span>
+        err = <span style=color:#ae81ff>0</span>;
+        <span style=color:#66d9ef>for</span> i = <span style=color:#ae81ff>1</span>:n
+            xNew(i) = b(i)<span style=color:#f92672>/</span>A(i,i)<span style=color:#f92672>-</span>A(i,[<span style=color:#ae81ff>1</span>:i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n])<span style=color:#f92672>*</span>(xOld([<span style=color:#ae81ff>1</span>:i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n])<span style=color:#f92672>/</span>A(i,i));
+            err = err <span style=color:#f92672>+</span> abs((xNew(i)<span style=color:#f92672>-</span>xOld(i))<span style=color:#f92672>/</span>xNew(i));
+        <span style=color:#66d9ef>end</span>
+        <span style=color:#66d9ef>if</span> showSteps <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>
+            fprintf(&#34;Iteration <span style=color:#75715e>%d\n&#34;,k);</span>
+            disp(xNew);
+            abs((xNew<span style=color:#f92672>-</span>xOld)<span style=color:#f92672>/</span>xNew);
+        <span style=color:#66d9ef>end</span>
+        
+        
+        <span style=color:#66d9ef>if</span> err <span style=color:#f92672>&lt;</span> eLimit
+            <span style=color:#66d9ef>break</span>;
+        <span style=color:#66d9ef>end</span>
+        xOld = xNew;
+    <span style=color:#66d9ef>end</span>
+    x = xNew;
+<span style=color:#66d9ef>end</span>
+</code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Script for SOR method</span></h5><div class=card><div class=card-body><p>Solves a system of linear equations by successive over relaxation, prompts for co-efficient matrix, contant vector, initial guesses and relaxation factor.<br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span style=color:#75715e>%   Title:  SOR method                                              %</span>
+<span style=color:#75715e>%   Author: Dhiman Roy, Dept. of ME (BUET)                          %</span>
+<span style=color:#75715e>%   Date:   August 23, 2021                                         %</span>
+<span style=color:#75715e>%   Licensed under Creative Commons                                 %</span>
+<span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+clear; 
 clc;
-global showSteps;
-showSteps = false; %true shows calculation steps</p><p>A = input(&lsquo;Please Enter the Co-efficient Matrix, A:\n&rsquo; );
-b = input(&lsquo;Please Enter the Constants(Must be a column vector, b:\n&rsquo;);</p><p>solBySOR = sor(A, b)</p><p>function [x] = sor(A, b)
-global showSteps;
-xIni = input(&ldquo;Enter initial guesses (Must be a column vector:\n&rdquo;);
-eLimit = input(&ldquo;Enter tolerance:\n&rdquo;);
-w = input(&ldquo;Enter Relaxation Factor:\n&rdquo;);</p><pre><code>[m,n] = size(A);
+<span style=color:#66d9ef>global</span> showSteps;
+showSteps = false; <span style=color:#75715e>%true shows calculation steps</span>
 
-for k = 1: n-1
-    for p = k+1:n
-        if abs(A(k,k) &lt; A(p,k))
-            b([k p]) = b([p k]);
-            A([k p],:) = A([p k],:);
-        end
-    end
-end
-check = ones(n,1);
-for i = 1:n
-    if 2*abs(A(i,i)) &lt; sum(abs(A(i,:))) 
-        check(i) = 0;
-    end
-end
-if all(check) ~= 1
-    error(&quot;Partial Pivoting does not make the coefficient matrix a diagonally dominant matrix.&quot;)
-else
-    disp(&quot;Partial Pivoting makes the coefficient matrix a diagonally dominant matrix.&quot;)
-end
+A = input(<span style=color:#e6db74>&#39;Please Enter the Co-efficient Matrix, A:\n&#39;</span> ); 
+b = input(<span style=color:#e6db74>&#39;Please Enter the Constants(Must be a column vector, b:\n&#39;</span>); 
 
-x = xIni;
-xOld = x;
+solBySOR = sor(A, b)
 
-for k = 1:100
-    err = 0;
-    for i = 1:n
-        x(i) = (1-w)*x(i) + w*(b(i)-A(i,[1:i-1,i+1:n])*x([1:i-1,i+1:n]))/A(i,i);
-        abs((x(i)-xOld(i))/x(i))
-        err = err + abs((x(i)-xOld(i))/x(i));
-        xOld(i) = x(i);
-    end
-    if showSteps == 1
-        fprintf(&quot;Iteration %d\n&quot;,k);
-        disp(x);
-        disp(err);
-    end
+<span style=color:#66d9ef>function</span> [x] = <span style=color:#a6e22e>sor</span>(A, b)
+    <span style=color:#66d9ef>global</span> showSteps;
+    xIni = input(&#34;Enter initial guesses (Must be a column vector:<span style=color:#f92672>\</span>n&#34;); 
+    eLimit = input(&#34;Enter tolerance:<span style=color:#f92672>\</span>n&#34;);
+    w = input(&#34;Enter Relaxation Factor:<span style=color:#f92672>\</span>n&#34;);
     
-    if err &lt; eLimit
-        break
-    end
-end
-</code></pre><p>end</p><pre><code></code></pre></div></div></div></div></div><div class=paginator></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=/#about-me>About Me</a></li><li class=nav-item><a class=smooth-scroll href=/#education>Education</a></li><li class=nav-item><a class=smooth-scroll href=/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=/#research>Research</a></li><li class=nav-item><a class=smooth-scroll href=/#publications>Publications</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>dhimanroy117@gmail.com</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4></div><div class="col-md-4 text-center"><a class=text-white>© 2021 || Dhiman Roy</a><p style=font-size:11px class=text-warning>Updated on:
+    [m,n] = size(A);
+    
+    <span style=color:#66d9ef>for</span> k = <span style=color:#ae81ff>1</span>: n<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
+        <span style=color:#66d9ef>for</span> p = k<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n
+            <span style=color:#66d9ef>if</span> abs(A(k,k) <span style=color:#f92672>&lt;</span> A(p,k))
+                b([k p]) = b([p k]);
+                A([k p],:) = A([p k],:);
+            <span style=color:#66d9ef>end</span>
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+    check = ones(n,<span style=color:#ae81ff>1</span>);
+    <span style=color:#66d9ef>for</span> i = <span style=color:#ae81ff>1</span>:n
+        <span style=color:#66d9ef>if</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>*</span>abs(A(i,i)) <span style=color:#f92672>&lt;</span> sum(abs(A(i,:))) 
+            check(i) = <span style=color:#ae81ff>0</span>;
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>if</span> all(check) <span style=color:#f92672>~=</span> <span style=color:#ae81ff>1</span>
+        error(&#34;Partial Pivoting does not make the coefficient matrix a diagonally dominant matrix.&#34;)
+    <span style=color:#66d9ef>else</span>
+        disp(&#34;Partial Pivoting makes the coefficient matrix a diagonally dominant matrix.&#34;)
+    <span style=color:#66d9ef>end</span>
+    
+    x = xIni;
+    xOld = x;
+    
+    <span style=color:#66d9ef>for</span> k = <span style=color:#ae81ff>1</span>:<span style=color:#ae81ff>100</span>
+        err = <span style=color:#ae81ff>0</span>;
+        <span style=color:#66d9ef>for</span> i = <span style=color:#ae81ff>1</span>:n
+            x(i) = (<span style=color:#ae81ff>1</span><span style=color:#f92672>-</span>w)<span style=color:#f92672>*</span>x(i) <span style=color:#f92672>+</span> w<span style=color:#f92672>*</span>(b(i)<span style=color:#f92672>-</span>A(i,[<span style=color:#ae81ff>1</span>:i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n])<span style=color:#f92672>*</span>x([<span style=color:#ae81ff>1</span>:i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n]))<span style=color:#f92672>/</span>A(i,i);
+            abs((x(i)<span style=color:#f92672>-</span>xOld(i))<span style=color:#f92672>/</span>x(i))
+            err = err <span style=color:#f92672>+</span> abs((x(i)<span style=color:#f92672>-</span>xOld(i))<span style=color:#f92672>/</span>x(i));
+            xOld(i) = x(i);
+        <span style=color:#66d9ef>end</span>
+        <span style=color:#66d9ef>if</span> showSteps <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>
+            fprintf(&#34;Iteration <span style=color:#75715e>%d\n&#34;,k);</span>
+            disp(x);
+            disp(err);
+        <span style=color:#66d9ef>end</span>
+        
+        <span style=color:#66d9ef>if</span> err <span style=color:#f92672>&lt;</span> eLimit
+            <span style=color:#66d9ef>break</span>
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+<span style=color:#66d9ef>end</span>
+
+</code></pre></div></div></div></div></div></div><div class=paginator></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=/#about-me>About Me</a></li><li class=nav-item><a class=smooth-scroll href=/#education>Education</a></li><li class=nav-item><a class=smooth-scroll href=/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=/#research>Research</a></li><li class=nav-item><a class=smooth-scroll href=/#publications>Publications</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>dhimanroy117@gmail.com</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4></div><div class="col-md-4 text-center"><a class=text-white>© 2021 || Dhiman Roy</a><p style=font-size:11px class=text-warning>Updated on:
 <time>November 26, 2021</time></p></div><div class="col-md-4 text-right"></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/imagesloaded.pkgd.min.js></script><script src=/js/note.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>

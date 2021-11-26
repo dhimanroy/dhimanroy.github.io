@@ -1,68 +1,77 @@
-<!doctype html><html><head><title>Successive Over Relaxation method</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css><link rel=icon type=image/png href=/images/site/favicon_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png><meta property="og:title" content="Successive Over Relaxation method"><meta property="og:description" content="Script for SOR method ```matlab %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% % Title: Jacobi Method % % Author: Dhiman Roy, Dept. of ME (BUET) % % Date: August 23, 2021 % % Licensed under Creative Commons % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% clear; clc; global showSteps; showSteps = false; %true shows calculation steps
-A = input(&lsquo;Please Enter the Co-efficient Matrix, A:\n&rsquo; ); b = input(&lsquo;Please Enter the Constants(Must be a column vector, b:\n&rsquo;);
-solBySOR = sor(A, b)
-function [x] = sor(A, b) global showSteps; xIni = input(&ldquo;Enter initial guesses (Must be a column vector:\n&rdquo;); eLimit = input(&ldquo;Enter tolerance:\n&rdquo;); w = input(&ldquo;Enter Relaxation Factor:\n&rdquo;);"><meta property="og:type" content="article"><meta property="og:url" content="https://dhimanroy.github.io/codes/matlab-scripts/for-solving-system-of-linear-equations/by-successive-over-relaxation-method/"><meta property="article:published_time" content="2021-08-23T00:00:00+00:00"><meta property="article:modified_time" content="2021-08-23T00:00:00+00:00"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/notes.css><link rel=stylesheet href=/css/navigators/sidebar.css><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-199814292-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<!doctype html><html><head><title>Successive Over Relaxation method</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css><link rel=icon type=image/png href=/images/site/favicon_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png><meta property="og:title" content="Successive Over Relaxation method"><meta property="og:description" content="Script for SOR methodSolves a system of linear equations by successive over relaxation, prompts for co-efficient matrix, contant vector, initial guesses and relaxation factor. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% % Title: SOR method % % Author: Dhiman Roy, Dept. of ME (BUET) % % Date: August 23, 2021 % % Licensed under Creative Commons % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% clear; clc; global showSteps; showSteps = false; %true shows calculation steps A = input('Please Enter the Co-efficient Matrix, A:\n' ); b = input('Please Enter the Constants(Must be a column vector, b:\n'); solBySOR = sor(A, b) function [x] = sor(A, b) global showSteps; xIni = input(&#34;Enter initial guesses (Must be a column vector:\n&#34;); eLimit = input(&#34;Enter tolerance:\n&#34;); w = input(&#34;Enter Relaxation Factor:\n&#34;); [m,n] = size(A); for k = 1: n-1 for p = k+1:n if abs(A(k,k) < A(p,k)) b([k p]) = b([p k]); A([k p],:) = A([p k],:); end end end check = ones(n,1); for i = 1:n if 2*abs(A(i,i)) < sum(abs(A(i,:))) check(i) = 0; end end if all(check) ~= 1 error(&#34;Partial Pivoting does not make the coefficient matrix a diagonally dominant matrix."><meta property="og:type" content="article"><meta property="og:url" content="https://dhimanroy.github.io/codes/matlab-scripts/for-solving-system-of-linear-equations/by-successive-over-relaxation-method/"><meta property="article:published_time" content="2021-08-23T00:00:00+00:00"><meta property="article:modified_time" content="2021-08-23T00:00:00+00:00"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/notes.css><link rel=stylesheet href=/css/navigators/sidebar.css><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-199814292-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
 <span class=navbar-toggler-icon></span></button>
 <a class=navbar-brand href=/><img src=/images/site/main-logo_hu98b1e25c44cc76379c733a63e18e4740_51846_42x0_resize_box_2.png alt=Logo>
 Dhiman Roy</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
 <span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/site/main-logo_hu98b1e25c44cc76379c733a63e18e4740_51846_42x0_resize_box_2.png class=d-none id=main-logo alt=Logo>
-<img src=/images/site/inverted-logo_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/codes data-filter=all>Codes</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/codes/bash-scripts/>Bash Scripts</a><ul><li><a href=/codes/bash-scripts/for-custom-commands/ title="For custom commands">For custom commands</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/batch-scripts/>Batch Scripts</a><ul><li><a href=/codes/batch-scripts/for-adding-firewall-rules/ title="For adding firewall rules">For adding firewall rules</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/scheme-codes/>Scheme Codes</a><ul><li><a href=/codes/scheme-codes/for-creating-points-and-monitors/ title="For creating points and monitors">For creating points and monitors</a></li><li><a href=/codes/scheme-codes/for-extacting-xy-plot-data/ title="For extacting xy plot data">For extacting xy plot data</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/python-scripts/>Python Scripts</a><ul><li><a href=/codes/python-scripts/for-calculating-average-drag/ title="For calculating average drag coefficient">For calculating average drag coefficient</a></li><li><a href=/codes/python-scripts/for-creating-java-script/ title="For creating Java Script that populates a webform">For creating Java Script that populates a webform</a></li><li><a href=/codes/python-scripts/for-making-pdf-and-sending-it-to-the-faculty-member/ title="For making PDF of exam routine and sending mail">For making PDF of exam routine and sending mail</a></li></ul></li><li><i class="fas fa-minus-circle"></i><a class=active href=/codes/matlab-scripts/>Matlab Scripts</a><ul class=active><li><i class="fas fa-minus-circle"></i><a class=active href=/codes/matlab-scripts/for-solving-system-of-linear-equations/>For solving system of linear equations</a><ul class=active><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-elimination-method/ title="Gauss Elimination method">Gauss Elimination method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-jordan-method/ title="Gauss Jordan method">Gauss Jordan method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-jacobi-method/ title="Jacobi method">Jacobi method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-seidel-method/ title="Gauss Seidel method">Gauss Seidel method</a></li><li><a class=active href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-successive-over-relaxation-method/ title="Successive Over Relaxation method">Successive Over Relaxation method</a></li></ul></li></ul></li><li><a href=/codes/dpm-particle-history-data/ title="DPM Particle History">DPM Particle History</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Script for SOR method</span></h5><div class=card><div class=card-body><br>```matlab
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Title: Jacobi Method %
-% Author: Dhiman Roy, Dept. of ME (BUET) %
-% Date: August 23, 2021 %
-% Licensed under Creative Commons %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<p>clear;
+<img src=/images/site/inverted-logo_hu14f86f4c455681d899338db8db5c3617_46413_42x0_resize_box_2.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/codes data-filter=all>Codes</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/codes/bash-scripts/>Bash Scripts</a><ul><li><a href=/codes/bash-scripts/for-custom-commands/ title="For custom commands">For custom commands</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/batch-scripts/>Batch Scripts</a><ul><li><a href=/codes/batch-scripts/for-adding-firewall-rules/ title="For adding firewall rules">For adding firewall rules</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/scheme-codes/>Scheme Codes</a><ul><li><a href=/codes/scheme-codes/for-creating-points-and-monitors/ title="For creating points and monitors">For creating points and monitors</a></li><li><a href=/codes/scheme-codes/for-extacting-xy-plot-data/ title="For extacting xy plot data">For extacting xy plot data</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/codes/python-scripts/>Python Scripts</a><ul><li><a href=/codes/python-scripts/for-calculating-average-drag/ title="For calculating average drag coefficient">For calculating average drag coefficient</a></li><li><a href=/codes/python-scripts/for-creating-java-script/ title="For creating Java Script that populates a webform">For creating Java Script that populates a webform</a></li><li><a href=/codes/python-scripts/for-making-pdf-and-sending-it-to-the-faculty-member/ title="For making PDF of exam routine and sending mail">For making PDF of exam routine and sending mail</a></li></ul></li><li><i class="fas fa-minus-circle"></i><a class=active href=/codes/matlab-scripts/>Matlab Scripts</a><ul class=active><li><i class="fas fa-minus-circle"></i><a class=active href=/codes/matlab-scripts/for-solving-system-of-linear-equations/>For solving system of linear equations</a><ul class=active><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-elimination-method/ title="Gauss Elimination method">Gauss Elimination method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-jordan-method/ title="Gauss Jordan method">Gauss Jordan method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-jacobi-method/ title="Jacobi method">Jacobi method</a></li><li><a href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-gauss-seidel-method/ title="Gauss Seidel method">Gauss Seidel method</a></li><li><a class=active href=/codes/matlab-scripts/for-solving-system-of-linear-equations/by-successive-over-relaxation-method/ title="Successive Over Relaxation method">Successive Over Relaxation method</a></li></ul></li></ul></li><li><a href=/codes/dpm-particle-history-data/ title="DPM Particle History">DPM Particle History</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Script for SOR method</span></h5><div class=card><div class=card-body><p>Solves a system of linear equations by successive over relaxation, prompts for co-efficient matrix, contant vector, initial guesses and relaxation factor.<br></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span style=color:#75715e>%   Title:  SOR method                                              %</span>
+<span style=color:#75715e>%   Author: Dhiman Roy, Dept. of ME (BUET)                          %</span>
+<span style=color:#75715e>%   Date:   August 23, 2021                                         %</span>
+<span style=color:#75715e>%   Licensed under Creative Commons                                 %</span>
+<span style=color:#75715e>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+clear; 
 clc;
-global showSteps;
-showSteps = false; %true shows calculation steps</p><p>A = input(&lsquo;Please Enter the Co-efficient Matrix, A:\n&rsquo; );
-b = input(&lsquo;Please Enter the Constants(Must be a column vector, b:\n&rsquo;);</p><p>solBySOR = sor(A, b)</p><p>function [x] = sor(A, b)
-global showSteps;
-xIni = input(&ldquo;Enter initial guesses (Must be a column vector:\n&rdquo;);
-eLimit = input(&ldquo;Enter tolerance:\n&rdquo;);
-w = input(&ldquo;Enter Relaxation Factor:\n&rdquo;);</p><pre><code>[m,n] = size(A);
+<span style=color:#66d9ef>global</span> showSteps;
+showSteps = false; <span style=color:#75715e>%true shows calculation steps</span>
 
-for k = 1: n-1
-    for p = k+1:n
-        if abs(A(k,k) &lt; A(p,k))
-            b([k p]) = b([p k]);
-            A([k p],:) = A([p k],:);
-        end
-    end
-end
-check = ones(n,1);
-for i = 1:n
-    if 2*abs(A(i,i)) &lt; sum(abs(A(i,:))) 
-        check(i) = 0;
-    end
-end
-if all(check) ~= 1
-    error(&quot;Partial Pivoting does not make the coefficient matrix a diagonally dominant matrix.&quot;)
-else
-    disp(&quot;Partial Pivoting makes the coefficient matrix a diagonally dominant matrix.&quot;)
-end
+A = input(<span style=color:#e6db74>&#39;Please Enter the Co-efficient Matrix, A:\n&#39;</span> ); 
+b = input(<span style=color:#e6db74>&#39;Please Enter the Constants(Must be a column vector, b:\n&#39;</span>); 
 
-x = xIni;
-xOld = x;
+solBySOR = sor(A, b)
 
-for k = 1:100
-    err = 0;
-    for i = 1:n
-        x(i) = (1-w)*x(i) + w*(b(i)-A(i,[1:i-1,i+1:n])*x([1:i-1,i+1:n]))/A(i,i);
-        abs((x(i)-xOld(i))/x(i))
-        err = err + abs((x(i)-xOld(i))/x(i));
-        xOld(i) = x(i);
-    end
-    if showSteps == 1
-        fprintf(&quot;Iteration %d\n&quot;,k);
-        disp(x);
-        disp(err);
-    end
+<span style=color:#66d9ef>function</span> [x] = <span style=color:#a6e22e>sor</span>(A, b)
+    <span style=color:#66d9ef>global</span> showSteps;
+    xIni = input(&#34;Enter initial guesses (Must be a column vector:<span style=color:#f92672>\</span>n&#34;); 
+    eLimit = input(&#34;Enter tolerance:<span style=color:#f92672>\</span>n&#34;);
+    w = input(&#34;Enter Relaxation Factor:<span style=color:#f92672>\</span>n&#34;);
     
-    if err &lt; eLimit
-        break
-    end
-end
-</code></pre><p>end</p><pre><code></code></pre></div></div></div></div></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=/#about-me>About Me</a></li><li class=nav-item><a class=smooth-scroll href=/#education>Education</a></li><li class=nav-item><a class=smooth-scroll href=/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=/#research>Research</a></li><li class=nav-item><a class=smooth-scroll href=/#publications>Publications</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>dhimanroy117@gmail.com</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4></div><div class="col-md-4 text-center"><a class=text-white>© 2021 || Dhiman Roy</a><p style=font-size:11px class=text-warning>Updated on:
+    [m,n] = size(A);
+    
+    <span style=color:#66d9ef>for</span> k = <span style=color:#ae81ff>1</span>: n<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
+        <span style=color:#66d9ef>for</span> p = k<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n
+            <span style=color:#66d9ef>if</span> abs(A(k,k) <span style=color:#f92672>&lt;</span> A(p,k))
+                b([k p]) = b([p k]);
+                A([k p],:) = A([p k],:);
+            <span style=color:#66d9ef>end</span>
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+    check = ones(n,<span style=color:#ae81ff>1</span>);
+    <span style=color:#66d9ef>for</span> i = <span style=color:#ae81ff>1</span>:n
+        <span style=color:#66d9ef>if</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>*</span>abs(A(i,i)) <span style=color:#f92672>&lt;</span> sum(abs(A(i,:))) 
+            check(i) = <span style=color:#ae81ff>0</span>;
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>if</span> all(check) <span style=color:#f92672>~=</span> <span style=color:#ae81ff>1</span>
+        error(&#34;Partial Pivoting does not make the coefficient matrix a diagonally dominant matrix.&#34;)
+    <span style=color:#66d9ef>else</span>
+        disp(&#34;Partial Pivoting makes the coefficient matrix a diagonally dominant matrix.&#34;)
+    <span style=color:#66d9ef>end</span>
+    
+    x = xIni;
+    xOld = x;
+    
+    <span style=color:#66d9ef>for</span> k = <span style=color:#ae81ff>1</span>:<span style=color:#ae81ff>100</span>
+        err = <span style=color:#ae81ff>0</span>;
+        <span style=color:#66d9ef>for</span> i = <span style=color:#ae81ff>1</span>:n
+            x(i) = (<span style=color:#ae81ff>1</span><span style=color:#f92672>-</span>w)<span style=color:#f92672>*</span>x(i) <span style=color:#f92672>+</span> w<span style=color:#f92672>*</span>(b(i)<span style=color:#f92672>-</span>A(i,[<span style=color:#ae81ff>1</span>:i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n])<span style=color:#f92672>*</span>x([<span style=color:#ae81ff>1</span>:i<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>,i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>:n]))<span style=color:#f92672>/</span>A(i,i);
+            abs((x(i)<span style=color:#f92672>-</span>xOld(i))<span style=color:#f92672>/</span>x(i))
+            err = err <span style=color:#f92672>+</span> abs((x(i)<span style=color:#f92672>-</span>xOld(i))<span style=color:#f92672>/</span>x(i));
+            xOld(i) = x(i);
+        <span style=color:#66d9ef>end</span>
+        <span style=color:#66d9ef>if</span> showSteps <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>
+            fprintf(&#34;Iteration <span style=color:#75715e>%d\n&#34;,k);</span>
+            disp(x);
+            disp(err);
+        <span style=color:#66d9ef>end</span>
+        
+        <span style=color:#66d9ef>if</span> err <span style=color:#f92672>&lt;</span> eLimit
+            <span style=color:#66d9ef>break</span>
+        <span style=color:#66d9ef>end</span>
+    <span style=color:#66d9ef>end</span>
+<span style=color:#66d9ef>end</span>
+
+</code></pre></div></div></div></div></div></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=/#about-me>About Me</a></li><li class=nav-item><a class=smooth-scroll href=/#education>Education</a></li><li class=nav-item><a class=smooth-scroll href=/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=/#research>Research</a></li><li class=nav-item><a class=smooth-scroll href=/#publications>Publications</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>dhimanroy117@gmail.com</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4></div><div class="col-md-4 text-center"><a class=text-white>© 2021 || Dhiman Roy</a><p style=font-size:11px class=text-warning>Updated on:
 <time>November 26, 2021</time></p></div><div class="col-md-4 text-right"></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/imagesloaded.pkgd.min.js></script><script src=/js/note.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
