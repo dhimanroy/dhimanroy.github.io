@@ -23,7 +23,7 @@ summary:
 # title supports mark down
 
 latestNews:
-  showLatestNews: true
+  showLatestNews: false
   newsList:
   - title: '<text style="color: #248aaa">[November 17, 2021]</text> Research article on Covid-19 exposure risk mitigation is publised online.'
     url: https://aip.scitation.org/doi/10.1063/5.0069454
