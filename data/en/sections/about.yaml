@@ -49,7 +49,7 @@ socialLinks:
 
 - name: LinkedIn
   icon: "fab fa-linkedin"
-  url: "#"
+  url: "https://www.linkedin.com/in/roy-dhiman/"
 
 - name: Google Scholar
   icon: "ai ai-google-scholar"
@@ -57,7 +57,7 @@ socialLinks:
 
 - name: Researchgate
   icon: "fab fa-researchgate"
-  url: "#"
+  url: "https://www.researchgate.net/profile/Dhiman-Roy-3"
 
 - name: Github
   icon: "fab fa-github-square"
