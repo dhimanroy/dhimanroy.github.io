@@ -68,14 +68,14 @@ skills:
   url: "https://golang.org"
 
 - name: InfluxDB
-  logo: /images/sections/skills/influxDB.svg
+  #logo: /images/sections/skills/influxDB.svg
   summary: "InfluxDB is an open-source time series database. Developed a real time data monitoring system using influxDB and Grafana."
   url: "https://www.influxdata.com/products/influxdb-overview/"
   
-# - name: Flux Language
-#   logo: /images/sections/skills/flux-logo.svg
-#   summary: "Experienced in Flux. Flux is a standalone data scripting and query language that increases productivity and code reuse."
-#   url: "https://www.influxdata.com/products/flux/"
+- name: Flux Language
+  #logo: /images/sections/skills/flux-logo.svg
+  summary: "Experienced in Flux. Flux is a standalone data scripting and query language that increases productivity and code reuse."
+  url: "https://www.influxdata.com/products/flux/"
 
 # - name: Grafana
 #   logo: /images/sections/skills/grafana.svg
