@@ -5,6 +5,8 @@
   />
   <link rel="stylesheet" href="{{ "/css/layouts/notes.css" | relURL}}">
   <link rel="stylesheet" href="{{ "/css/navigators/sidebar.css" | relURL}}">
+  {{ $image       :=  (index site.Data site.Language.Lang).site.openGraph.image | default  (index site.Data site.Language.Lang).author.image }}
+  <meta property="og:image" content="{{ $image | absURL }}">  
 {{ end }}
 
 {{ define "navbar" }}
